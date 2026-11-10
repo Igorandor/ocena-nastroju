@@ -1,0 +1,1797 @@
+{
+  "schema_version": "online-round/1",
+  "page_version": "online-1",
+  "round": "pilot2",
+  "presentation": "window",
+  "instruction": {
+    "version": "draft-2",
+    "text": "# Instrukcja oceniania\n\nWersja `draft-2` (pilotaż). Przeczytanie zajmie ok. 3 minuty.\n\n## Co robisz\n\nPrzy każdym fragmencie zobaczysz kilka szarych akapitów (kontekst) i jeden wyróżniony akapit. Najpierw przeczytaj kontekst, żeby wiedzieć, co się dzieje. **Oceniasz tylko wyróżniony akapit:** jaki nastrój buduje w nim autor przez słowa, obrazy i tempo.\n\nDajesz dwie oceny, każdą od 1 do 9.\n\n**Nastrój (walencja): nieprzyjemny ↔ przyjemny**\n\n| 1 | 3 | 5 | 7 | 9 |\n|---|---|---|---|---|\n| bardzo ponury, przygnębiający lub groźny | raczej nieprzyjemny | ani przyjemny, ani nieprzyjemny | raczej przyjemny | bardzo radosny, ciepły |\n\n**Energia (pobudzenie): spokój ↔ intensywność.** Jak „żywy” jest ten akapit, niezależnie od tego, czy jest miły, czy nie?\n\n| 1 | 3 | 5 | 7 | 9 |\n|---|---|---|---|---|\n| zupełny spokój, statyczny opis | spokojna scena, zwykła rozmowa | coś się dzieje, lekkie napięcie lub ożywienie | żywa akcja, silne emocje, wyraźne napięcie | gwałtowna akcja, szok, panika lub euforia |\n\nEnergia nie mówi, czy jest dobrze, czy źle. Wesoła zabawa i ucieczka przed pożarem mają wysoką energię; ciepłe zasypianie i ponura cisza mają niską.\n\n## Pięć zasad\n\n1. **Oceniasz tekst, nie siebie.** Nie „co ja czuję” ani „szkoda mi ich”, tylko jak autor przedstawia sytuację.\n2. **Tylko wyróżniony akapit.** Kontekst służy do zrozumienia. Nie przenoś na ocenę nastroju poprzednich akapitów ani tego, co wiesz o dalszych losach bohaterów.\n3. **Postać to nie narracja.** Bohater może się ekscytować w spokojnie opisanej scenie. Oceniasz scenę, a różnicę zaznaczasz w polu „Postać czuje co innego niż narracja”.\n4. **Opis też ma nastrój.** „Nic się nie dzieje” nie oznacza automatycznie 5 i 1. Ponury opis biedy ma nieprzyjemny nastrój, a dramatyczny bezruch (ktoś osłupiał z szoku) ma wysoką energię.\n5. **5 to ocena, nie „nie wiem”.** Gdy się wahasz, wybierz najlepszą według siebie ocenę i zaznacz niską pewność. Przy nastroju 5 zaznacz, czy jest neutralny (brak wyraźnego tonu), czy mieszany (np. smutek i nadzieja naraz).\n\n## Przykłady (wymyślone)\n\n| Akapit | Nastrój | Energia |\n|---|---|---|\n| „Babcia drzemała przy ciepłym piecu, a kot mruczał jej na kolanach.” | przyjemny (ok. 7) | niska (ok. 2) |\n| „Siedzieli przy zimnym piecu w milczeniu, każdy myślał o długach.” | nieprzyjemny (ok. 3) | niska (ok. 2) |\n| „Wbiegli na salę i porwali się do tańca, a muzyka grała coraz szybciej.” | przyjemny (ok. 8) | wysoka (ok. 8) |\n| „Drzwi trzasnęły i ktoś krzyknął: pali się!” | nieprzyjemny (ok. 2) | bardzo wysoka (ok. 9) |\n| „Na stole leżały trzy zeszyty i ołówek.” | neutralny (5) | bardzo niska (ok. 1) |\n| „Zbierali datki dla głodnych; mówił o biedzie, ale z nadzieją w głosie.” | mieszany (5) | umiarkowana (ok. 4) |\n| „Marek śmiał się, nie widząc, jak dym wpełza pod drzwi.” | nieprzyjemny (ok. 3) | średnia (ok. 5); postać czuje co innego niż narracja |\n\nLiczby w nawiasach pokazują kierunek, a nie jedyną poprawną odpowiedź.\n\n## Pozostałe pola\n\n- **Pewność:** 1 niska, 2 średnia, 3 wysoka.\n- **Znasz to dzieło?** Odpowiadasz raz na książkę.\n- **Nie potrafię ocenić:** tylko gdy naprawdę się nie da (np. akapit jest niezrozumiały). Wpisz krótko dlaczego.\n- **Komentarz:** opcjonalny, np. gdy widzisz ironię.\n\n## Jak pracować\n\nOceniaj sam(a), bez rozmów o ocenach i bez pomocy AI. Nie ma dobrych ani złych odpowiedzi i nie ma limitu czasu, ale nie zastanawiaj się zbyt długo: zwykle wystarcza ok. minuty. Po kliknięciu „Zatwierdź” formularz sam przejdzie do następnego akapitu. Jeśli się pomylisz, wróć przyciskiem „Popraw poprzedni”; poprawka zapisze się osobno. Na koniec kliknij „Eksportuj” i wyślij plik organizatorowi.\n"
+  },
+  "instruction_sha256": "2169e6be0882e96f64e33527cb3247fc85a7cdec6a7b8145433b8bdb3fc192f8",
+  "items": [
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00006",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 6,
+      "target_text": "Pan Tomasz trzydzieści lat chodził ulicą Miodową i nieraz myślał, że się na niej wiele rzeczy zmieniło. Toż samo ulica Miodowa pomyśleć by mogła o nim.",
+      "text_sha256": "22a08f0da6f3fefbab038dedea4c0d4727edc4ff3e73efdf12f78cc9acfdae8c",
+      "context": [
+        {
+          "paragraph_index": 3,
+          "text": "W drodze ustępował każdemu, a potrącony uśmiechał się życzliwie."
+        },
+        {
+          "paragraph_index": 4,
+          "text": "Jeżeli kiedy spostrzegał ładną kobietę, zakładał binokle, aby przypatrzeć się jej. Ale że robił to flegmatycznie, więc zwykle spotykał go zawód."
+        },
+        {
+          "paragraph_index": 5,
+          "text": "Ten jegomość był to --- pan Tomasz."
+        }
+      ],
+      "context_chars": 243,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00011",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 11,
+      "target_text": "Nareszcie porządki jego stały się sławne. Sam nie wiedząc kiedy, stworzył u siebie galerię sztuk pięknych, którą coraz liczniej odwiedzali ciekawi. Że zaś był gościnny, przyjęcia robił świetne i utrzymywał stosunki z muzykami, więc nieznacznie zorganizowały się u niego wieczory koncertowe, które nawet damy zaszczycały swoją obecnością.",
+      "text_sha256": "882eb00921230418a25915b74e865fc912ea1cbc757333c4153078bad7cc796b",
+      "context": [
+        {
+          "paragraph_index": 9,
+          "text": "Ale człowiekowi dojrzałemu trudno zrobić wybór. Ta była za młoda, a tamtą uwielbiał już zbyt długo. Trzecia miała wdzięki i wiek właściwy, ale nieodpowiedni temperament, a czwarta posiadała wdzięki, wiek i temperament należyty, ale... nie czekając na oświadczyny mecenasa wyszła za doktora..."
+        },
+        {
+          "paragraph_index": 10,
+          "text": "Pan Tomasz jednak nie martwił się, ponieważ panien nie brakło. Ekwipował się powoli, coraz usilniej dbając o to, ażeby każdy szczegół jego mieszkania posiadał wartość artystyczną. Zmieniał meble, przestawiał zwierciadła, kupował obrazy."
+        }
+      ],
+      "context_chars": 528,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00031",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 31,
+      "target_text": "Ktoś złośliwy, wiedząc o wstręcie mecenasa do grających machin, wymyślił niesmaczny żart --- i... wysłał mu pod okna dwu kataryniarzy. Pan Tomasz zachorował z gniewu, a następnie odkrywszy sprawcę, wyzwał go na pojedynek.",
+      "text_sha256": "a3b2d3c2c2a0055cb91b0e8b9effd1f96770a6327cbb648e990bf9cf46cb61e6",
+      "context": [
+        {
+          "paragraph_index": 28,
+          "text": "Z tej swojej słabości nie robił przed nikim tajemnicy, nawet tłumaczył się."
+        },
+        {
+          "paragraph_index": 29,
+          "text": "--- Muzyka --- mówił wzburzony --- stanowi najsubtelniejsze ciało ducha, w katarynce zaś duch ten przeradza się w funkcję machiny i narzędzie rozboju. Bo kataryniarze są po prostu rabusie!"
+        },
+        {
+          "paragraph_index": 30,
+          "text": "--- Zresztą --- dodawał --- katarynka rozdrażnia mnie, a ja mam tylko jedno życie, którego mi nie wypada trwonić na słuchanie obrzydliwej muzyki."
+        }
+      ],
+      "context_chars": 408,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00043",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 43,
+      "target_text": "Lokal mecenasa składał się z dwu części. Cztery większe pokoje miały okna od ulicy, dwa mniejsze --- od podwórza. Paradna połowa mieszkania przeznaczona była dla gości. W niej odbywały się rauty, przyjmowani byli interesanci i stawali krewni albo znajomi mecenasa ze wsi. Sam pan Tomasz ukazywał się tu rzadko i tylko dla sprawdzenia, czy wywoskowano posadzki, czy starto kurz i nie uszkodzono mebli.",
+      "text_sha256": "1233dc01317fd82098971cc0a845137adfd64c512cccc47adefd4be6d551b791",
+      "context": [
+        {
+          "paragraph_index": 40,
+          "text": "--- Nie mogę wiedzieć, jaśnie panie --- odpowiedział wzruszony stróż."
+        },
+        {
+          "paragraph_index": 41,
+          "text": "--- Za to, ażebyś na podwórze nigdy nie puszczał katarynek. Rozumiesz?..."
+        },
+        {
+          "paragraph_index": 42,
+          "text": "--- Rozumiem, jaśnie wielmożny panie."
+        }
+      ],
+      "context_chars": 179,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00059",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 59,
+      "target_text": "Mizerna dziewczynka oparłszy głowę na ręku położyła się prawie na wznak w swoim oknie --- i --- szeroko otwartymi oczyma patrzyła prosto w słońce. Na jej twarzyczce, zwykle tak nieruchomej, grały teraz jakieś uczucia: niby radość, a niby żal...",
+      "text_sha256": "9bde25b1a98a1c50cb3fb7fc95fab1c222de19290d5b04fbe657973d7096bdfe",
+      "context": [
+        {
+          "paragraph_index": 56,
+          "text": "Mecenas zgorszył się. Jak mogło być smutno w domu, w którym on od tylu lat miał dobry humor!"
+        },
+        {
+          "paragraph_index": 57,
+          "text": "Jednego dnia mecenas znalazł się w swoim gabinecie około czwartej. W tej godzinie słońce stało naprzeciw mieszkania jego sąsiadek, a świeciło i dogrzewało bardzo mocno. Pan Tomasz spojrzał na drugą stronę podwórza i widać zobaczył coś niezwykłego, gdyż z pośpiechem założył na nos binokle."
+        },
+        {
+          "paragraph_index": 58,
+          "text": "Oto co spostrzegł:"
+        }
+      ],
+      "context_chars": 399,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00076",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 76,
+      "target_text": "Mijały dnie i tygodnie w ciągłym oczekiwaniu. Dziewczynka poczęła już wstawać z łóżeczka. Nauczyła się chodzić po pokoju omackiem; sama ubierała się i rozbierała powoli i ostrożnie.",
+      "text_sha256": "c3a679fa8c4d6db50b1fd1a08cb7a9df97a71bfcc662dd49af22168a9e6ff29f",
+      "context": [
+        {
+          "paragraph_index": 73,
+          "text": "--- Może jutro, proszę mamy?"
+        },
+        {
+          "paragraph_index": 74,
+          "text": "--- Za kilka dni, moja dziecino."
+        },
+        {
+          "paragraph_index": 75,
+          "text": "--- A jak przejdzie, to niech mi mama zaraz powie. Bo mi jest bardzo smutno!..."
+        }
+      ],
+      "context_chars": 139,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00091",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 91,
+      "target_text": "--- Jakim sposobem?... --- zawołała dziewczynka żałośnie. --- Przecie jeżeli ja nie widzę siebie, to już w lustrze nie powinno być nic...",
+      "text_sha256": "5d2ed08b77210a13db77848026e8145852a6fd7601ead9f1cd9299f18e56799e",
+      "context": [
+        {
+          "paragraph_index": 88,
+          "text": "Matka podaje jej lusterko."
+        },
+        {
+          "paragraph_index": 89,
+          "text": "--- Trzeba patrzeć tutaj, o tu, gdzie jest gładkie --- mówiła dziewczynka przykładając lustro do twarzy. --- Nic nie widzę! --- rzekła --- Czy i mama nie widzi mnie w lusterku?"
+        },
+        {
+          "paragraph_index": 90,
+          "text": "--- Widzę cię, moja ptaszyno."
+        }
+      ],
+      "context_chars": 231,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00095",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 95,
+      "target_text": "Jednego dnia przyniosła jej matka lalkę porcelanową, ładnie ubraną, za rubla. Dziewczynka nie wypuszczała jej z rąk, dotykała jej noska, ust, oczu, pieściła się nią.",
+      "text_sha256": "69a439baccb738badaba06714bb57bcc56d2542e378ac1b3eddf297ca6ac7751",
+      "context": [
+        {
+          "paragraph_index": 92,
+          "text": "--- A tamta, co jest w lustrze, czy ona mnie widzi, czy nie widzi?..."
+        },
+        {
+          "paragraph_index": 93,
+          "text": "Ale matka rozpłakała się i wybiegła z pokoju."
+        },
+        {
+          "paragraph_index": 94,
+          "text": "Najmilszym zajęciem kaleki było dotykać rękoma drobnych przedmiotów i poznawać je."
+        }
+      ],
+      "context_chars": 196,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00101",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 101,
+      "target_text": "Stopniowo pamięć wzrokowych wrażeń poczęła zacierać się w dziewczynce. Czerwona wiśnia stała się dla niej wiśnią gładką, okrągłą i miękką, błyszczący pieniądz był twardym i dźwięcznym krążkiem, na którym znajdowały się jakieś znaki w płaskorzeźbie. Wiedziała, że pokój jest większy od niej, dom większy od pokoju, ulica od domu. Ale wszystko to jakoś --- skróciło się w jej wyobraźni.",
+      "text_sha256": "47b732a85235d8701a1db6f5e027d9258eb869d35e974c2b28bb8b59d159bbc2",
+      "context": [
+        {
+          "paragraph_index": 98,
+          "text": "--- Co ty robisz, dziecino? --- zawołała. --- Dlaczego nie śpisz?"
+        },
+        {
+          "paragraph_index": 99,
+          "text": "--- Bo już przecie jest dzień, proszę mamy --- odparła kaleka."
+        },
+        {
+          "paragraph_index": 100,
+          "text": "Dla niej dzień i noc zlały się w jedno i trwały zawsze..."
+        }
+      ],
+      "context_chars": 184,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00117",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 117,
+      "target_text": "Jedyną jej przyjemnością było wpatrywanie się w słońce, które przecież nie zawsze jednakowo świeciło i bardzo prędko kryło się za domami.",
+      "text_sha256": "cd2f1e790e2296b3f57b12871935eb89ca4a87bd00c3668b1b814e775ff15168",
+      "context": [
+        {
+          "paragraph_index": 115,
+          "text": "W tej właśnie epoce matka połączyła się ze swoją przyjaciółką i przeniosła się do domu, w którym mieszkał pan Tomasz. Obie kobiety cieszyły się z nowego lokalu, ale dla niewidomej zmiana miejsca była prawdziwym nieszczęściem."
+        },
+        {
+          "paragraph_index": 116,
+          "text": "Dziewczynka musiała siedzieć w pokoju. Na strych i do piwnicy nie wolno było chodzić. Nie słyszała ptaków ani drzew, a na podwórzu panowała straszna cisza. Nigdy tu nie wstępowali handlarze starzyzny ani druciarze, ani śmieciarki. Nie puszczano bab śpiewających pieśni pobożne ani dziada, który grał na klarnecie, ani kataryniarzy."
+        }
+      ],
+      "context_chars": 556,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00129",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 129,
+      "target_text": "Pana Tomasza proszono o zbadanie, kiedy naprawdę X był wariatem, a następnie o pogodzenie trzech powaśnionych stron, z których żadna nie chciała słuchać o ustępstwach.",
+      "text_sha256": "3814a80c43dd04d1b03da38707ef6b1ea5b87b1186f1f8d05c2fd9d2f9499c5a",
+      "context": [
+        {
+          "paragraph_index": 128,
+          "text": "Obywatel X w roku 1872 zapisał swemu siostrzeńcowi folwark, a w roku 1875 --- synowcowi kamienicę. Synowiec twierdził, że obywatel X był wariatem w roku 1872, a siostrzeniec dowodził, że X oszalał dopiero w roku 1875. Zaś mąż rodzonej siostry nieboszczyka składał nie ulegające wątpliwości świadectwa, że X i w roku 1872, i w 1875 działał jak obłąkany, a cały swój majątek jeszcze w roku 1869, czyli w epoce zupełnej świadomości, zapisał siostrze."
+        }
+      ],
+      "context_chars": 447,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00141",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 141,
+      "target_text": "Ona, biedactwo, w tym domu spokojnym dawno już nie doświadczyła tylu wrażeń! Jak pięknym zjawiskiem wydawały się jej fałszywe tony katarynki! Jak wspaniałym był ryk trąby, która mecenasa mało nie przyprawiła o apopleksję.",
+      "text_sha256": "63089ac604b54efcb972b0ae95493d1fca0e83f94fa30303ebbbf0fc0a6db2d8",
+      "context": [
+        {
+          "paragraph_index": 138,
+          "text": "Już wychylił się i otworzył usta, aby krzyknąć: ,,Ty... próżniaku jakiś!...\" --- gdy wtem usłyszał dziecięcy głos."
+        },
+        {
+          "paragraph_index": 139,
+          "text": "Spojrzał naprzeciwko."
+        },
+        {
+          "paragraph_index": 140,
+          "text": "Mała niewidoma dziewczynka tańczyła po pokoju, klaszcząc w ręce. Blada jej twarz zarumieniła się, usta śmiały się, a pomimo to z zastygłych oczu płynęły łzy jak grad."
+        }
+      ],
+      "context_chars": 301,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00145",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 145,
+      "target_text": "--- Ja mówiłem temu gałganowi, jaśnie panie, żeby natychmiast wygnał kataryniarza! Mówiłem, że od jaśnie pana dostanie pensję, że my mamy kontrakt... Ale ten cham! Tydzień temu przyjechał ze wsi i nie zna naszych obyczajów.",
+      "text_sha256": "32e3fe4fc35e6a890b753ad20598a69128c3efeca50ce4ae84663cf35203c604",
+      "context": [
+        {
+          "paragraph_index": 142,
+          "text": "Na dobitkę, kataryniarz, widząc uciechę dziecka, zaczął przytupywać wielkim obcasem w bruk i od czasu do czasu pogwizdywać niby lokomotywa przed spotkaniem się pociągów."
+        },
+        {
+          "paragraph_index": 143,
+          "text": "Boże! Jak on ślicznie gwizdał..."
+        },
+        {
+          "paragraph_index": 144,
+          "text": "Do gabinetu mecenasa wpadł wierny lokaj ciągnąc za sobą stróża i wołając:"
+        }
+      ],
+      "context_chars": 274,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00156",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 156,
+      "target_text": "--- Ażeby, dopóki się z nim nie rozmówię, puszczał co dzień katarynki na podwórze --- powtórzył mecenas wsadzając ręce w kieszenie.",
+      "text_sha256": "929c6c3f39c25659cf97b83004b4f6e39aaafdc7fd6c8198f45e6eaa25b1f337",
+      "context": [
+        {
+          "paragraph_index": 153,
+          "text": "--- Za to, ażebyś na podwórze nigdy nie puszczał katarynek! --- wtrącił śpiesznie lokaj."
+        },
+        {
+          "paragraph_index": 154,
+          "text": "--- Nie --- rzekł pan Tomasz. --- Za to, ażebyś przez jakiś czas co dzień puszczał katarynki. Rozumiesz?"
+        },
+        {
+          "paragraph_index": 155,
+          "text": "--- Co pan mówi?... --- zawołał służący, którego nagle rozzuchwalił ten niepojęty rozkaz."
+        }
+      ],
+      "context_chars": 281,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:katarynka:p00162",
+      "book_id": "katarynka",
+      "work_group_id": "katarynka",
+      "author": "Bolesław Prus",
+      "title": "Katarynka",
+      "selection_stratum": "original_polish",
+      "source_url": "https://wolnelektury.pl/media/book/xml/katarynka.xml",
+      "rights": "Domena publiczna - Bolesław Prus zm. 1912",
+      "split": "pilot",
+      "structural_region": "1",
+      "paragraph_index": 162,
+      "target_text": "Następnie wziął kalendarz, wyszukał w nim listę lekarzy i zapisał na kartce adresy kilku okulistów. A że kataryniarz odwrócił się teraz do jego okna i za jego dziesiątkę począł przytupywać i wygwizdywać jeszcze głośniej, co już okrutnie drażniło mecenasa, więc zabrawszy kartkę z adresami doktorów wyszedł mrucząc:",
+      "text_sha256": "2183e0f39c3763d444cff6098bedff5001c369a8aceee8425f0b63b4d91e7e62",
+      "context": [
+        {
+          "paragraph_index": 159,
+          "text": "No, idźcie do roboty --- dodał."
+        },
+        {
+          "paragraph_index": 160,
+          "text": "Lokaj i stróż wyszli, a mecenas spostrzegł, że jego wierny sługa coś towarzyszowi swemu szepcze do ucha i pokazuje palcem na czoło..."
+        },
+        {
+          "paragraph_index": 161,
+          "text": "Pan Tomasz uśmiechnął się i jakby dla stwierdzenia ponurych domysłów famulusa wyrzucił katarynce dziesiątkę."
+        }
+      ],
+      "context_chars": 272,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00051",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "5",
+      "paragraph_index": 51,
+      "target_text": "--- Firma Scrooge i Marley, jeżeli się nie mylę? --- zapytał jeden z nich, zaglądając do swej listy. --- Czy mam przyjemność mówić z panem Scrooge czy z panem Marleyem?",
+      "text_sha256": "22c82089521ae900cbc6c5767faa72dcd0dec5a9d6389e2cfbb550c543cb7f93",
+      "context": [
+        {
+          "paragraph_index": 49,
+          "text": "--- Macie drugiego idiotę! --- mruczał Scrooge, który słyszał wymianę życzeń. --- Mój pomocnik, posiadający rodzinę i piętnaście szylingów tygodniowo na jej utrzymanie, mówi o ,,wesołych świętach\"! Chyba wstąpić do szpitala wariatów!"
+        },
+        {
+          "paragraph_index": 50,
+          "text": "Pomocnik, odprowadziwszy do drzwi siostrzeńca Scrooge'a, wpuścił jakichś dwóch jegomościów. Byli to poważni obywatele, o przyjemnej powierzchowności; zdjąwszy kapelusze, stanęli przy biurku Scrooge'a. Trzymając w rękach portfele i papiery, skłonili mu się uprzejmie."
+        }
+      ],
+      "context_chars": 499,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00085",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "6",
+      "paragraph_index": 85,
+      "target_text": "--- A jednak --- ciągnął Sorooge --- pan nawet nie pomyślisz o tym, że ja mogę się uczuć pokrzywdzony, płacąc panu całkowite wynagrodzenie za dzień świąteczny.",
+      "text_sha256": "787eada9f1b57065ceda69514b7531959c5a9a0cbaf6aace4228d058f73ee208",
+      "context": [
+        {
+          "paragraph_index": 82,
+          "text": "--- Jeśli pan uważa to za właściwe... --- szepnął nieśmiało pomocnik."
+        },
+        {
+          "paragraph_index": 83,
+          "text": "--- Ja wcale nie uważam tego za właściwe. Tak... nie widzę w tym nic właściwego. Jestem pewny, że gdybym potrącił panu z pensji należność za ten dzień, uczułbyś się pan pokrzywdzony?"
+        },
+        {
+          "paragraph_index": 84,
+          "text": "Pomocnik uśmiechnął się łagodnie."
+        }
+      ],
+      "context_chars": 284,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00095",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "6",
+      "paragraph_index": 95,
+      "target_text": "Nie była ona otoczona, jak inne przedmioty na ulicy --- nieprzeniknioną ciemnością, przeciwnie, otaczało ją słabe światło, które zdawało się z niej promieniować. Nie miała ona ani groźnego, ani przerażającego wyrazu, spoglądała na Scrooge'a tak, jak zwykle spoglądał Marley na niego za życia: podniósłszy okulary na czoło. Włosy były dziwnie zmierzwione, jakby gwałtownym wichrem lub silnym strumieniem pary, a oczy, choć szeroko otwarte, były tępe, martwe, co, w połączeniu z szarą barwą skóry, czyniło tę twarz odrażającą. Zdawało się jednak, że przerażenie, jakie budził ten widok, pochodziło nie z samej twarzy, ani też z jej wyrazu, lecz wywoływał je inny jakiś, niezwykły powód.",
+      "text_sha256": "caccd52b9a2ef651ae72c5aa37b35e46d093b7dc1fb9a78f7703d0bc5c7edc3e",
+      "context": [
+        {
+          "paragraph_index": 93,
+          "text": "Nie ulega wątpliwości, że nie było nic szczególnego w kołatce wiszącej przy furtce tej bramy, chyba to, że była bardzo wielka. Pewne jest również, że Scrooge widywał ją każdego dnia rano i wieczorem, podczas swego długoletniego zamieszkiwania w tym domu. Pewne jest wreszcie, iż tak mało posiadał w sobie tego, co się nazywa fantazją, jak może żaden człowiek w Londynie, nie wyłączając nawet --- a to jest śmiałe słowo --- członków parlamentu i rady miejskiej. Należy jeszcze mieć na względzie, że Scrooge nie pomyślał o Marleyu ani przez chwilę od czasu, kiedy wspomniał o jego śmierci tegoż właśnie popołudnia. A teraz niechże mi ktokolwiek raczy wyjaśnić, jeżeli zdoła, jak to się stało, że Scrooge, wsunąwszy klucz w zamek drzwi, zobaczył zamiast kołatki twarz Marleya..."
+        },
+        {
+          "paragraph_index": 94,
+          "text": "Tak, twarz zmarłego Marleya."
+        }
+      ],
+      "context_chars": 803,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00101",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "6",
+      "paragraph_index": 101,
+      "target_text": "Ale Scrooge szedł na górę, nic sobie z tego nie robiąc. Ciemność jest tania, a taniość była słabą stroną Scrooge'a. Znalazłszy się w mieszkaniu, zanim zamknął i zaryglował ciężkie drzwi, przeszedł się po pokojach dla stwierdzenia, czy wszystko jest w porządku. Być może, iż tajemnicze przeistoczenie się kołatki skłoniło go do tej ostrożności.",
+      "text_sha256": "df6f1c96b87c78008359faaf17515af7c7c47377acd0d46e8baed9305843ce08",
+      "context": [
+        {
+          "paragraph_index": 100,
+          "text": "Może który z czytelników wyobrazi sobie, że były to wspaniałe schody z dawnych czasów, gdzie łatwo by się zmieściła kareta zaprzężona w szóstkę koni. Otóż mogę wam zaręczyć, że schody prowadzące do mieszkania Scrooge'a były jeszcze szersze. Zmieściłby się na nich nawet karawan, oczywiście ustawiony w poprzek, orczykiem do ściany, a tylnymi kołami do poręczy. I nie tylko zmieściłby się, ale zostałoby jeszcze sporo miejsca. To właśnie mogło być powodem, że Scrooge'owi zdawało się istotnie, że widzi przed sobą karawan posuwający się w górę. Pół tuzina ulicznych lamp gazowych nie oświetliłoby dostatecznie tych schodów, można więc przypuszczać, że przy jednej mdłej świeczce, którą Scrooge sobie przyświecał, było dosyć ciemno i ponuro."
+        }
+      ],
+      "context_chars": 739,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00136",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "6",
+      "paragraph_index": 136,
+      "target_text": "Scrooge nigdy nie miał skłonności do żartów, a w tej chwili więcej jeszcze niż kiedykolwiek był daleki od żartobliwego usposobienia. Jeżeli usiłował być dowcipny i żartobliwy, to dlatego, by rozerwać samego siebie, zmienić kierunek swych myśli i opanować coraz silniej przejmujący go strach, gdyż głos widziadła wstrząsał go do szpiku kości.",
+      "text_sha256": "3c5485adc070618ef9f975972c94cac41050b7f5789f7e360f563afa3cfb4c1f",
+      "context": [
+        {
+          "paragraph_index": 133,
+          "text": "--- Nie wiem."
+        },
+        {
+          "paragraph_index": 134,
+          "text": "--- Dlaczego nie ufasz swoim zmysłom?"
+        },
+        {
+          "paragraph_index": 135,
+          "text": "--- Ponieważ często błahostka wyprowadza je z równowagi. Lekka niedyspozycja żołądka czyni z nich oszustów. W rezultacie, możesz być kawałkiem niestrawionej wołowiny, odrobioną musztardy, okruszyną sera, odrobiną niedogotowanego ziemniaka... Pomimo wszystko, wydajesz mi się więcej istotą cielesną niż duchem."
+        }
+      ],
+      "context_chars": 359,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00147",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "6",
+      "paragraph_index": 147,
+      "target_text": "--- Wierzę! --- westchnął Scrooge. --- Muszę wierzyć. Powiedz mi jednak, dlaczego duchy włóczą się po świecie? Dlaczego przychodzą mnie męczyć?",
+      "text_sha256": "a88d7aa29e5ab1ef022d95a7b7b74053744497ba09e0faa324e2c756aa186589",
+      "context": [
+        {
+          "paragraph_index": 144,
+          "text": "Scrooge upadł wtedy na kolana i zasłonił twarz dłońmi."
+        },
+        {
+          "paragraph_index": 145,
+          "text": "--- Litości! --- zawołał. --- Straszne zjawisko, dlaczego mnie tak dręczysz?!"
+        },
+        {
+          "paragraph_index": 146,
+          "text": "--- Człowieku o przyziemnym umyśle, zaprzątniętym jedynie znikomymi sprawami ziemskimi, wierzysz we mnie teraz czy nie?"
+        }
+      ],
+      "context_chars": 250,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00156",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "6",
+      "paragraph_index": 156,
+      "target_text": "--- Nie mogę --- odrzekł duch. --- Pociecha przychodzi z innych sfer, Ebenezerze Scrooge, bywa przysyłana przez innych posłańców, innym rodzajom ludzi. Nie mogę ci też powiedzieć wszystkiego, co bym pragnął. Wolno mi wyjawić ci niewiele więcej. Przy tym nie rozporządzam czasem. Nie wolno mi nigdy odpocząć, nie mogę pozostawać w jednym miejscu, nie mogę zatrzymać się nigdzie. Dusza moja za życia nigdy nie wyszła poza ściany naszego kantoru (uważaj, co mówię!) nigdy nie wyjrzała poza ciasny zakres naszych marnych interesów. Wiesz o tym dobrze. Dlatego skazany zostałem po śmierci na nieskończoną, niewymownie dręczącą wędrówkę...",
+      "text_sha256": "40c25bb4853cfd9d2825d15e501270f2aab4868be924958c4d7f6d0b0ad78b58",
+      "context": [
+        {
+          "paragraph_index": 153,
+          "text": "--- A może chciałbyś poznać --- ciągnął duch --- wagę i długość łańcucha, który sam dźwigasz? Co? Siedem lat temu był tak ciężki i tak długi, jak mój. Od tego czasu jednak pracowałeś usilnie, ażeby go doprowadzić do kolosalnych rozmiarów. O tak, twój łańcuch to ogrom potężny!"
+        },
+        {
+          "paragraph_index": 154,
+          "text": "Scrooge obejrzał skwapliwie swoją osobę, obawiając się, czy nie ujrzy dokoła niej pięćdziesięciu lub sześćdziesięciu metrów żelaznego powroza; lecz jakoś nic podobnego nie dostrzegł."
+        },
+        {
+          "paragraph_index": 155,
+          "text": "--- Jakubie Marleyu --- odezwał się błagalnie --- stary Jakubie Marleyu, mój dobry przyjacielu, powiedz mi wszystko, co wiesz! Pociesz mnie, Jakubie, choć słówkiem!"
+        }
+      ],
+      "context_chars": 622,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00165",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "6",
+      "paragraph_index": 165,
+      "target_text": "Zasłyszawszy to, duch jęknął po raz trzeci i zabrzęczał swym łańcuchem w głuchej ciszy nocy tak straszliwie, że stróż nocny miałby słuszny powód aresztować go za zakłócenie spokoju publicznego.",
+      "text_sha256": "07d37e7b73170ced6a128b4908d73e8017d9f01143ed76e36e283e049fe01ff9",
+      "context": [
+        {
+          "paragraph_index": 162,
+          "text": "--- Jak prędko podróżujesz? --- badał Scrooge."
+        },
+        {
+          "paragraph_index": 163,
+          "text": "--- Na skrzydłach wiatru."
+        },
+        {
+          "paragraph_index": 164,
+          "text": "--- Musiałeś zatem przebyć przez lat siedem olbrzymią przestrzeń --- rzekł Scrooge."
+        }
+      ],
+      "context_chars": 154,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00182",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "6",
+      "paragraph_index": 182,
+      "target_text": "--- W takim razie, drogi Jakubie, może lepiej dać temu pokój --- rzekł Scrooge. --- Zdaje mi się... to jest... wolę skwitować ze wszystkiego.",
+      "text_sha256": "5626b4cfbf0a5fa8db01d3443a6086a633fd51bad33f464321611c058913ccdd",
+      "context": [
+        {
+          "paragraph_index": 179,
+          "text": "Twarz Scrooge'a z przerażenia stała się również blada jak bezcielesne oblicze widma."
+        },
+        {
+          "paragraph_index": 180,
+          "text": "--- Czy to ma być sposobność i nadzieja, o których wspominałeś, Jakubie? --- zapytał drżącym głosem."
+        },
+        {
+          "paragraph_index": 181,
+          "text": "--- Tak."
+        }
+      ],
+      "context_chars": 192,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00198",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "7",
+      "paragraph_index": 198,
+      "target_text": "--- To niepodobna --- mruczał Scrooge --- żebym przespał dzień i część drugiej nocy. Niepodobna również, żeby słońcu przytrafiło się coś nadzwyczajnego, żeby teraz zamiast południa była północ.",
+      "text_sha256": "5b4a465d7564e51f79cd0462c1afceed08a397d70035df1ce7aa34e650e631f3",
+      "context": [
+        {
+          "paragraph_index": 196,
+          "text": "Ku wielkiemu jego zdziwieniu, ciężki dzwon wybił sześć, siedem, osiem i tak dalej aż do dwunastu. Wtedy zatrzymał się. Dwunasta? To być nie może. Było przecież już po drugiej, gdy poszedł spać. Zegar mylił się. Lód musiał się dostać między jego koła i tryby. Dwunasta!"
+        },
+        {
+          "paragraph_index": 197,
+          "text": "Przycisnął sprężynę swego repetiera w celu skontrolowania ogłupiałego zegara, lecz repetier także wybił dwunastą, a potem zatrzymał się."
+        }
+      ],
+      "context_chars": 404,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00226",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "7",
+      "paragraph_index": 226,
+      "target_text": "Zapewne Scrooge nie byłby w stanie powiedzieć, gdyby go kto o to zapytał, dlaczego zapragnął widzieć Ducha w osobliwej czapce na głowie. Ale faktem jest, że powstało w nim to życzenie, i to w tak natarczywym stopniu, że nie mógł się pohamować i poprosił Ducha o nakrycie głowy.",
+      "text_sha256": "da3f73c7c76ee3e64763884365028ec77a75a3c9340497783811f98610fbd44a",
+      "context": [
+        {
+          "paragraph_index": 223,
+          "text": "--- Jestem Duchem Wigilijnej Przeszłości."
+        },
+        {
+          "paragraph_index": 224,
+          "text": "--- Bardzo dawnej przeszłości? --- zapytał Scrooge, wpatrując się w karlęcą postać zjawiska."
+        },
+        {
+          "paragraph_index": 225,
+          "text": "--- Nie. Duchem twojej Wigilijnej Przeszłości."
+        }
+      ],
+      "context_chars": 179,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00259",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "9",
+      "paragraph_index": 259,
+      "target_text": "Wnętrze niczym nie przypominało dawnej świetności. Znalazłszy się w ciemnym, ponurym, pełnym śmiecia i błota korytarzu, przez otwarte drzwi ogarniało się wzrokiem cały szereg pokojów pustych i zimnych. Powietrze było przesycane wilgocią, z każdego kąta wyzierało opuszczenie. Zewsząd wiał chłód, mrożący duszę i wskazujący wielki niedostatek.",
+      "text_sha256": "69dd4689727360a849eaf4596037b136b33ed424fa5855476341c229f2420951",
+      "context": [
+        {
+          "paragraph_index": 257,
+          "text": "Minęli szeroką szosę i dobrze znajomą Scrooge'owi drożyną zbliżyli się do wielkiego gmachu zbudowanego z czerwonej cegły, na którym trzymała się jeszcze wieżyczka z dzwonem."
+        },
+        {
+          "paragraph_index": 258,
+          "text": "Był to niegdyś wspaniały dom, ale smutne spotkały go losy i teraz przedstawiał wymowne świadectwo znikomości rzeczy doczesnych. Ściany jego zewnętrzne wilgoć przeżarła i mchy pokryły, okna były pobite, bramy i drzwi popróchniałe. Drób gdakał i gospodarował po stajniach, a spichrze, wozownie i szopy porosły chwastem."
+        }
+      ],
+      "context_chars": 490,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00266",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "9",
+      "paragraph_index": 266,
+      "target_text": "--- A to Walentyn! --- ciągnął dalej Scrooge. --- I jego dziki brat, Orson; idą tu obaj! A ten, jakże się on nazywa... no ten, którego położono śpiącego u bram Damaszku? Czy go nie widzisz? O, koniuszy sułtana, postawiony przez wróżkę na głowie nogami do góry... Ha... ha... wciąż stoi na głowie! Dobrze mu tak! Bardzo mnie to cieszy! Jakim prawem chciał się żenić z córką sułtana?",
+      "text_sha256": "fec5897603adb362917601c5ce73c14ef3b0007eddc1b28a340d6e50397b87e9",
+      "context": [
+        {
+          "paragraph_index": 264,
+          "text": "Wtem jakiś człowiek w dziwacznym stroju, z siekierą zatkniętą za pas zjawił się przed oknem, prowadząc za sobą osła obładowanego drzewem."
+        },
+        {
+          "paragraph_index": 265,
+          "text": "--- Ależ to Ali Baba! --- zawołał uradowany Scrooge. --- To stary, dobry, drogi, poczciwy Ali Baba! Poznaję go doskonale! Pewnego wieczora wigilijnego (dawno, bardzo dawno temu!) gdy to opuszczone dziecko zostało zupełnie samo, on przyszedł do niego po raz pierwszy właśnie w takim ubiorze jak teraz. Biedny chłopiec!"
+        }
+      ],
+      "context_chars": 454,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00270",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "9",
+      "paragraph_index": 270,
+      "target_text": "--- Pragnąłbym --- mruknął po chwili, otarłszy łzy rękawem szlafroka, wkładając rękę do kieszeni i oglądając się dokoła --- pragnąłbym bardzo... ale teraz pewnie już za późno!",
+      "text_sha256": "d4616a6a7af4381f6d529e89d40c14deed083af64e2dec00fc40290fe7eff614",
+      "context": [
+        {
+          "paragraph_index": 267,
+          "text": "--- A tam papuga! --- prowadził swoje wspomnienia Scrooge. --- Zielona, z żółtym ogonem, z czubem wyrastającym z głowy, podobnym do liści sałaty! Otóż jest. Znalazł ją Robinson Crusoe, gdy wrócił do domu po opłynięciu swej wyspy. Nauczył ją wołać: ,,Biedny Robinsonie Crusoe!\". Raz, gdy papuga do niego tak przemówiła, sądził, że śni; ale nie śnił. To istotnie mówiła papuga... A tam zaś Piętaszek pędzi do zatoki, uciekając przed ludożercami... Śmiało! Prędzej! Nie trać odwagi! Robinson cię ocali..."
+        },
+        {
+          "paragraph_index": 268,
+          "text": "Przechodząc od jednego wspomnienia do drugiego, z żywością, której by nikt w nim nie przypuszczał, Scrooge nagle znów uniósł się litością nad swym dawnym ,,ja\"."
+        },
+        {
+          "paragraph_index": 269,
+          "text": "--- Biedny, biedny chłopiec! --- szepnął i znów zapłakał."
+        }
+      ],
+      "context_chars": 718,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00318",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "9",
+      "paragraph_index": 318,
+      "target_text": "Gdy nahasano się już do woli, rozpoczęła się gra w fanty, potem nastąpiły znowu tańce, potem rozdawano ciasta i lemoniadę, pieczyste na zimno, znowu ciasta i mnóstwo piwa.",
+      "text_sha256": "678fe9b010b628be302d17d2cd3fdf93fe329c8aacd47b802fd2ca29e6740782",
+      "context": [
+        {
+          "paragraph_index": 315,
+          "text": "Korzystając z tego świetnego rezultatu zapału, stary Fezziwig wstrzymał tańczących klaśnięciem w dłonie i zawołał:"
+        },
+        {
+          "paragraph_index": 316,
+          "text": "--- Brawo! Doskonale!"
+        },
+        {
+          "paragraph_index": 317,
+          "text": "Wówczas skrzypek zanurzył swą twarz w kuflu porteru, umyślnie na ten cel przygotowanym. Lecz nie dopijając resztki, ukazał twarz znowu i natychmiast rozpoczął ponownie rzępolić, z większą jeszcze fantazją, choć nie było jeszcze tancerzy."
+        }
+      ],
+      "context_chars": 372,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00367",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "9",
+      "paragraph_index": 367,
+      "target_text": "Czego bym nie dał, żeby być jednym z nich! Lecz, oczywiście, nie okazałbym się tak okrutny jak oni, wierzajcie! Za wszystkie skarby świata nie ośmieliłbym się potargać gładko uczesanych włosów pięknej siostrzyczki ani też zerwać z jej stopy miniaturowego pantofelka... Nie ośmieliłbym się również, za nic na świecie, objąć wiotkiej i kształtnej jej kibici, jak to te małe nicponie czyniły podczas zabawy, bez wszelkiej ceremonii, gdyż obawiałbym się, żeby moja ręka za podobną zbrodnię nie pozostała już na zawsze zgięta.",
+      "text_sha256": "c273380248a25455d935c5c836a019f6a591012dab476b0f645ddc574b8f8a0e",
+      "context": [
+        {
+          "paragraph_index": 366,
+          "text": "W pokoju było gwarno, a nawet panował tam ogromny hałas, sprawiany przez gromadkę dzieci, których Scrooge w pierwszej chwili, będąc silnie wzburzony, nie zauważył. Dzieci owe wcale nie zachowywały się tak, jak owych czterdzieścioro maleństw w poemacie, co siedziały niby trusiątka, spokojnie i cicho. Ta dzieciarnia zachowywała się całkiem inaczej: każdy z malców swawolił i krzyczał za czterdziestu. Dlatego panowała tu taka olbrzymia wrzawa, która jednak nikogo nie raziła. Owszem, matka i córka śmiały się serdecznie i cieszyły się tym bardzo. Córka, wmieszawszy się do zabawy, została przez małych swawolników napadnięta ze wszystkich stron..."
+        }
+      ],
+      "context_chars": 647,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00369",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "9",
+      "paragraph_index": 369,
+      "target_text": "Po chwili rozległo się pukanie i dzieciarnia rzuciła się natychmiast ku drzwiom tak gwałtownie, z takim wrzaskiem, że piękna siostrzyczka, uśmiechnięta i z suknią w nieładzie, została porwana przez rozigraną gromadkę i pociągnięta na powitalnie ojca, wchodzącego z posłańcem obładowanym gwiazdkowymi podarkami.",
+      "text_sha256": "ac87ad7e9bdf1c8cdf008df7b8c6433ac60ca91d305e405f044b52be7df88237",
+      "context": [
+        {
+          "paragraph_index": 368,
+          "text": "A jednak, wyznaję szczerze, pragnąłbym dotknąć jej ust; pragnąłbym ją zapytać o coś, wprost dlatego, żeby ją skłonić do ich otworzenia; pragnąłbym patrzeć na jej spuszczone skromnie oczy, lecz tak, żeby nie wywołać rumieńca; pragnąłbym rozpleść jej wonne włosy, których najmniejszy loczek przechowałbym jako drogą pamiątkę; słowem, pragnąłbym wobec niej posiadać wszelkie przywileje dziecka i jednocześnie pozostać dojrzałym mężczyzną, aby móc należycie ocenić jej urok."
+        }
+      ],
+      "context_chars": 470,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00386",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "9",
+      "paragraph_index": 386,
+      "target_text": "Podczas walki z Duchem --- jeżeli to w ogóle można było nazwać walką, bo Duch, nie broniąc się wcale, zdawał się nie odczuwać wysiłków napastnika --- spostrzegł Scrooge, że nad głową Ducha unosi się teraz jeszcze jaśniejszy i wyższy niż przedtem wytrysk światła; w tym mniemaniu, że owo światło daje Duchowi nad nim przewagę, chwycił gasidło i wtłoczył je na głowę Ducha.",
+      "text_sha256": "a1aa7fe61ae041efe1f1f3c39673d59995acd55160b3e8e06bc37a85889b306b",
+      "context": [
+        {
+          "paragraph_index": 383,
+          "text": "--- Uprowadź mnie stąd! --- wołał Scrooge. --- Nie mogę znieść tego widowiska!"
+        },
+        {
+          "paragraph_index": 384,
+          "text": "Zwrócił się ku Duchowi, a zauważywszy, że na obliczu jego w niepojęty sposób odbiły się poszczególne rysy wszystkich tych twarzy, które niedawno widział --- rzucił się na niego z krzykiem rozpaczliwym:"
+        },
+        {
+          "paragraph_index": 385,
+          "text": "--- Opuść mnie! Uprowadź mnie stąd! Nie dręcz mnie dłużej!"
+        }
+      ],
+      "context_chars": 337,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00394",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "10",
+      "paragraph_index": 394,
+      "target_text": "Nie pragnę bynajmniej w Scrooge'u przedstawić takiego samochwały, mogę was jednak zapewnić, że był on przygotowany istotnie na cały szereg nadzwyczajnych zjawisk i wmawiał w siebie, że teraz już chyba nic nie może go wprawić w zdumienie, zaczynając od kolebki dziecka, a kończąc na olbrzymim nosorożcu.",
+      "text_sha256": "787350b11134b504874d50532f148790d31242e2efaaf1783bec54fc84a05526",
+      "context": [
+        {
+          "paragraph_index": 391,
+          "text": "Ludzie szczególnej odwagi, którzy utrzymują, że mogą znieść wszelkie wrażenia, nigdy zimnej krwi nie tracąc, zwykle mówią o sobie:"
+        },
+        {
+          "paragraph_index": 392,
+          "text": ",,Zdolni jesteśmy do wszystkiego: od zjadania chleba aż do połykania ludzi!\""
+        },
+        {
+          "paragraph_index": 393,
+          "text": "Między tymi dwiema ostatecznościami znajduje się niewątpliwie szerokie pole do popisu."
+        }
+      ],
+      "context_chars": 292,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00406",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "10",
+      "paragraph_index": 406,
+      "target_text": "Duch ten był przybrany w rodzaj ciemnozielonej opończy, obramowanej białym futrem. Szerokie piersi były odsłonięte, jak gdyby nic nie zależało mu na tym, aby je zakrywać. Także i nogi, wyglądające spod szerokich fałd opończy, były bose, głowa zaś nie miała żadnego innego nakrycia, tylko wieniec z liści dębowych, wśród których tu i ówdzie błyszczały sopelki lodu. Ciemnie jego włosy spadały w swobodnych zwojach na barki. Pogodne oblicze, błyszczące oczy, rubaszny głos, swobodne zachowanie się --- wszystko mówiło o jego otwartości i wesołym usposobieniu. Przy boku jego wisiała u pasa stara pochwa, na poły zjedzona przez rdzę, bez miecza.",
+      "text_sha256": "57d0c4e9d64dad094c32aa7595fc3b8a598190985b32888fa6720841d3c59a26",
+      "context": [
+        {
+          "paragraph_index": 403,
+          "text": "Nie był to już ten śmiały, niczego nieobawiający się, dawny Scrooge; teraz, chociaż oczy Ducha miały wyraz pogody i łagodności, to jednak unikał ich spojrzenia."
+        },
+        {
+          "paragraph_index": 404,
+          "text": "--- Jestem Duchem Tegorocznego Bożego Narodzenia --- przemówiło widmo --- przypatrz mi się dobrze."
+        },
+        {
+          "paragraph_index": 405,
+          "text": "Scrooge podniósł lękliwie oczy i spojrzał na Ducha z szacunkiem."
+        }
+      ],
+      "context_chars": 322,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00422",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "10",
+      "paragraph_index": 422,
+      "target_text": "Sklepy spożywcze były tylko do połowy otwarte, natomiast owocarnie imponowały swoim bogactwem. Tu widziałeś ogromne, pękate kosze wspaniałych kasztanów, przypominające swoją wypukłością brzuchy starych smakoszów. Ustawione we drzwiach sklepów, zdawało się, że lada chwila upadną na ulicę w zachwycie swego apoplektycznego zadowolenia. Tam spostrzegłeś czerwonawe główki hiszpańskiego czosnku, jaskrawe, przysadziste, zdające się spoglądać wyzywająco na skromnie snujące się dziewczęta, które tylko spod oka spoglądały na wiszące wszędzie girlandy uwite z gałązek ostrokrzewu. Dalej piętrzyły się apetyczne piramidy jabłek i gruszek. Ówdzie ułożono stosy winogron, na których ponętny widok aż ślinka cieknie. Dalej umieszczono całe stosy ciemnych, puszkiem okrytych orzechów, przypominających swoim aromatem dawno zapomniane przechadzki po lasach pełne uroku. Dalej pieczone i suszone jabłka norfolskie, pomarszczone i ciemne, lecz prześlicznie wyglądające na tle cytryn i pomarańczy, które zdawały się gwałtem napraszać, aby je zawinięto w papier, zabrano do domu i tam spożyto na deser. Złote i srebrne rybki --- i one nawet, chociaż posiadają krew zimną, teraz wystawione w małych, szklanych akwariach, wśród tego bogactwa owoców, jakby odgadywały, że dzieje się coś niezwykłego, bo z wielkim wzburzeniem przepływały tam i z powrotem swoje siedziby.",
+      "text_sha256": "3b71134a3cfb9994bce29354211da06ee3afe2553ae55bf87c3787c6ffe47fd0",
+      "context": [
+        {
+          "paragraph_index": 420,
+          "text": "Niebo było pochmurne i nawet najkrótsze ulice ginęły w gęstej mgle, której cięższe części spadały na ulice w postaci szronu. Nie było nic wesołego w całym otoczeniu --- a jednak unosiło się w powietrzu coś tak uroczystego i tak radosnego, że nawet najpiękniejsza letnia pogoda ani najjaśniejsze promienie letniego słońca nie zdołałyby stworzyć czegoś podobnego."
+        },
+        {
+          "paragraph_index": 421,
+          "text": "Nawet robotnicy zmiatający śnieg z dachów byli pełni wesołości i ochoty. Nawoływali się wzajem z dachów, od czasu do czasu rzucali jeden na drugiego kule śniegowe --- poczciwszy to pocisk aniżeli niejedno słówko --- i zanosili się serdecznym śmiechem zarówno przy trafieniu celu, jak w razie chybienia go."
+        }
+      ],
+      "context_chars": 666,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00426",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "10",
+      "paragraph_index": 426,
+      "target_text": "Wtem zabrzmiały dzwony wzywające pobożnych do kościoła --- i wkrótce ulice zaroiły się ludźmi, którzy poprzybierali nie tylko odświętne szaty, ale także najbardziej świąteczne miny.",
+      "text_sha256": "ee95bd1d599f5c4d51f4a7fa31f7af7f1a2ca6fd1d99fafbf71f303a41e5ed5f",
+      "context": [
+        {
+          "paragraph_index": 425,
+          "text": "Główną uwagę zwracali kupujący, niecierpliwie pragnący wypełnić dziś w zupełności od dawna umyślony plan. Trzeba było widzieć, jak się tłoczyli w drzwiach, uderzając jeden drugiego swymi koszykami i paczkami, zapominając na kontuarze część zakupów i szybko wracając po nie, popełniając tysiące pomyłek i przeoczeń z nadzwyczajną dobrodusznością --- jednocześnie trzeba było podziwiać cierpliwość kupca i jego pomocników, ich uprzejmość, ich ugrzecznienie, z jakim się dziś starali zwracać do wszystkich. Zdawało się, że gdybyś od nich zażądał serca, to bez wahania wyjęliby je z piersi i ofiarowali z równą skwapliwością jak herbatę lub kawę."
+        }
+      ],
+      "context_chars": 642,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00430",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "10",
+      "paragraph_index": 430,
+      "target_text": "Niebawem umilkły dzwony, a sklepy piekarzy zamknięto. W powietrzu unosiły się smaczne zapachy odgrzewanych obiadów, a kominy pieców piekarzy wyrzucały kłęby dymu pomieszanego z parą.",
+      "text_sha256": "5fcc414905300f9d49ccd0c8e887a2a3e0a1db747f5f6623ee4a50963b565c6c",
+      "context": [
+        {
+          "paragraph_index": 428,
+          "text": "Widok tych biednych, a jednak tak szczęśliwych w tej chwili, zdawał się najwięcej zajmować Ducha, zatrzymał się bowiem wraz ze Scroogem przy drzwiach jednego z piekarzy i podnosząc pokrywy naczyń w chwili, gdy niosący je przechodzili mimo niego, okadzał ich posiłek dymem swej pochodni."
+        },
+        {
+          "paragraph_index": 429,
+          "text": "Była to iście cudowna pochodnia; gdy bowiem kilku ludzi poczęło się o coś spierać i nawet padły z ich ust dość ostre wyrazy, Duch pokropił ich kilku kroplami rosy ze swej pochodni, a natychmiast wróciła im pogoda umysłu. Przyznawali teraz, że to wstyd sprzeczać się w dzień Bożego Narodzenia."
+        }
+      ],
+      "context_chars": 578,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00448",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "10",
+      "paragraph_index": 448,
+      "target_text": "--- Nie, nie, ojciec idzie --- odezwało się dwoje najmłodszych dzieci, które zawsze i wszędzie trzymały się razem --- schowaj się Marto, schowaj się!",
+      "text_sha256": "d9fbc84f4febd11e70554f35855e6e835646094977c6c0ddc5d1b383a7481546",
+      "context": [
+        {
+          "paragraph_index": 445,
+          "text": "--- Bóg z tobą, drogie dziecię! Jakże późno przychodzisz! --- rzekła pani Cratchit, obsypując córkę pocałunkami, a równocześnie zdejmując z niej szal i kapelusz."
+        },
+        {
+          "paragraph_index": 446,
+          "text": "--- Miałyśmy wczoraj wieczorem wiele roboty --- odparło dziewczę --- na dziś musiałyśmy ją wykończyć, mamo."
+        },
+        {
+          "paragraph_index": 447,
+          "text": "--- Wszystko już dobrze, skoro tu jesteś --- rzekła pani Cratchit. --- Usiądź przy kominku, drogie dziecię i ogrzej się."
+        }
+      ],
+      "context_chars": 388,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00456",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "11",
+      "paragraph_index": 456,
+      "target_text": "Był bowiem w najlepszym usposobieniu, nawet w drodze z kościoła do domu galopował dziarsko, udając konia Małego Tima, który był tym zachwycony.",
+      "text_sha256": "6b44da4202ab8ae5ec57a6c3bac92029c9b4948b1b1f063c560894e25918d25b",
+      "context": [
+        {
+          "paragraph_index": 453,
+          "text": "--- Gdzież nasza Marta? --- zapytał Bob Cratchit, rozglądając się po pokoju."
+        },
+        {
+          "paragraph_index": 454,
+          "text": "--- Nie przyjdzie --- odrzekła pani Cratchit."
+        },
+        {
+          "paragraph_index": 455,
+          "text": "--- Nie przyjdzie? --- powtórzył Bob, tracąc od razu dobry humor."
+        }
+      ],
+      "context_chars": 186,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00467",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "11",
+      "paragraph_index": 467,
+      "target_text": "Pani Cratchit zagrzała przy kominku zawczasu przygotowaną polewę do pieczystego; pan Piotr przysmażał kartofle z niepodobnym do opisania zapałem; panna Belinda studziła kompot z jabłek; Marta ścierała proch z ogrzanych talerzy; Bob wziął na ręce Małego Tima i posadził go przy stole obok siebie w najwygodniejszym miejscu; dwoje małych Cratchitów przystawiało krzesła do stołu, przy czym żadne z nich nie zapomniało o sobie i zająwszy przeznaczone im miejsca, powsadzały w buzie łyżki, aby nie napierać się gęsi, zanim przyjdzie na nie kolej.",
+      "text_sha256": "bd7e67ef39b77e3193df378d44aa3f98f76002e2f6c7bf42cbee78252f4bb380",
+      "context": [
+        {
+          "paragraph_index": 464,
+          "text": "Gdy Bob był zajęty tą ważną czynnością, pan Piotr w towarzystwie dwojga małych, nierozłącznych Cratchitów, którzy, mówiąc nawiasem, posiadali zdolność znajdowania się jednocześnie w dwudziestu różnych miejscach --- wybrał się po gęś, którą niebawem w uroczystym pochodzie wniósł do pokoju."
+        },
+        {
+          "paragraph_index": 465,
+          "text": "Teraz powstał taki hałas, jak gdyby gęś była najrzadszym ze wszystkich ptaków, upierzonym dziwem, wobec którego nawet czarny łabędź byłby czymś zupełnie zwyczajnym."
+        },
+        {
+          "paragraph_index": 466,
+          "text": "Jakoż istotnie była ona takim dziwem w tym domu."
+        }
+      ],
+      "context_chars": 501,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00508",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "11",
+      "paragraph_index": 508,
+      "target_text": "Zrobiło się ciemno i począł padać gęsty śnieg. Scrooge i Duch szli teraz przez ulice Londynu. W oknach domów błyszczały jasne, wesołe światła. Tu można było widzieć przygotowania do wieczerzy, bogato nakryte stoły, całe stosy talerzy ogrzewanych na gazie, kosztowne opony i meble; tam dzieci wybiegały na pokrytą śniegiem ulicę, aby powitać jak najprędzej przybywające zamężne siostry i braci, kuzynów, wujów, ciotki; ówdzie na oknach przesuwały się cienie zgromadzonych gości; tam znów dziewczęta, przybrane w futrzane kołnierze i takież buciki, szczebiocząc jedna przez drugą, lekkim krokiem spieszyły w sąsiedztwo. Biada kawalerom, którzy by teraz rzucili okiem na ich zarumienione twarzyczki i błyszczące, ożywione spojrzenia. Te figlarne czarodziejki wiedziały doskonale, jak są dla tych biedaków niebezpieczne!",
+      "text_sha256": "9db82b35093b0f535268567e125737dab443ed78060e2220aa6ae04ced511a73",
+      "context": [
+        {
+          "paragraph_index": 507,
+          "text": "W tym wszystkim nie było nic szczególnego, a tym bardziej nic arystokratycznego. W rodzinie tej nie było ani jednej postaci wytwornej, pięknie ubranej. Ich obuwie straciło dawno własność nieprzepuszczania wody, ich odzież była dobrze wyszarzana; dzieci wyglądały nędznie, a pan Piotr z pewnością znał dobrze wewnętrzne urządzenie lombardu. Mimo to byli szczęśliwi, zadowoleni i przepełnieni wdzięcznością za te skromne rozkosze, jakimi ich los obdarzał. Kochali się wzajem, panowała wśród nich zgoda i spokój ludzi uczciwych. W chwili, kiedy ich Scrooge opuszczał, zdawali się być jeszcze bardziej szczęśliwi w świetle błysków pochodni Ducha. Scrooge z trudnością oderwał od nich oczy, a zwłaszcza żal mu było rozstawać się z Małym Timem."
+        }
+      ],
+      "context_chars": 738,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00523",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "11",
+      "paragraph_index": 523,
+      "target_text": "Każdy marynarz znajdujący się na tym okręcie, czuwający czy śpiący, zły czy dobry, miał w tym dniu dla towarzyszy lepsze, cieplejsze słowo niż kiedykolwiek w ciągu roku, każdy uczestniczył w uroczystości, każdy w mniejszym lub większym stopniu doznawał radosnego uczucia, myślał o tych, którzy niezawodnie w tej chwili myślą też o nim.",
+      "text_sha256": "f34b7a33d2ecf0ad3e40484d6984f452f4ddef30026cbb7215d78df304e301d4",
+      "context": [
+        {
+          "paragraph_index": 522,
+          "text": "Duch znów uniósł Scrooge'a ponad czarne, piętrzące się morze, aż w końcu, daleko już od brzegów, zatrzymali się na pokładzie jakiegoś okrętu. Tu wciąż przechodzili z miejsca ma miejsce. Zatrzymali się najprzód przy sterniku, następnie przy strażniku, wreszcie przy oficerach na służbie. Wszystkie te szorstkie, surowe postacie, spełniając swoje ciężkie i odpowiedzialne obowiązki, nuciły jednak z cicha pieśń wigilijną, bądź myślały o wielkim święcie, bądź wreszcie opowiadały sobie wzajem wspomnienia dawnych świąt, spędzonych wśród rodziny, snując nadzieję rychłego powrotu do swoich."
+        }
+      ],
+      "context_chars": 586,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00526",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "11",
+      "paragraph_index": 526,
+      "target_text": "Gdybyś, szanowny czytelniku, co jednak jest niepodobieństwem, znał człowieka śmiejącego się serdeczniej i szczerzej niż siostrzeniec Scrooge'a, to i ja pragnąłbym go poznać. Przedstaw mnie, a będę utrzymywał z nim znajomość.",
+      "text_sha256": "6c9b3b96391ac56346cf5b1198863c293e728c4677f2a6926fc6b32135807fbe",
+      "context": [
+        {
+          "paragraph_index": 524,
+          "text": "Scrooge przysłuchiwał się żałosnym jękom wichru i rozmyślał, jaka to wspaniała rzecz posuwać się wśród nieprzejrzanej ciemności ponad niezmierzoną przepaścią ukrywającą na dnie swoim wielkie tajemnice. Nagle ze zdumieniem usłyszał głośny śmiech. Zdumienie zaś jego wzrosło do najwyższego stopnia, gdy poznał głos siostrzeńca i gdy znalazł się, nie wiadomo jakim sposobem, w jasnym, ciepłym i schludnym pokoju. Obok niego stał Duch i z życzliwym uśmiechem spoglądał na jego siostrzeńca."
+        },
+        {
+          "paragraph_index": 525,
+          "text": "--- Ha, ha, ha! --- śmiał się wciąż siostrzeniec Scrooge'a. --- Ha, ha, ha!"
+        }
+      ],
+      "context_chars": 560,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00532",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "11",
+      "paragraph_index": 532,
+      "target_text": "Żona Freda, a siostrzenica Scrooge'a była bardzo ładną kobietką. Miała milutką, naiwną twarzyczkę z ponętnymi dołkami na policzkach, prześliczne, jakby stworzone do pocałunków usta i najsłoneczniejszą parę ocząt. W jej piękności było coś wyzywającego, ale w tym dobrym, szlachetnym znaczeniu, które nikomu nie uchybia.",
+      "text_sha256": "68db54d7ad246554a2fe17a2044e28cc2a7a100da374c3f81eb2d60b12b6a85d",
+      "context": [
+        {
+          "paragraph_index": 529,
+          "text": "--- Jak mnie tu żywym widzicie, powiedział, że wigilia to głupstwo! --- wołał siostrzeniec Scrooge'a. --- Powiedział najwyraźniej i jestem przekonany, że rzeczywiście tak myśli."
+        },
+        {
+          "paragraph_index": 530,
+          "text": "--- Tym gorzej dla niego, Fredziu --- z oburzeniem zauważyła jego żona."
+        },
+        {
+          "paragraph_index": 531,
+          "text": "Błogosławione niech będą kobiety: one nic nie czynią połowicznie i zawsze biorą rzeczy na serio."
+        }
+      ],
+      "context_chars": 344,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00535",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "11",
+      "paragraph_index": 535,
+      "target_text": "--- I cóż z tego, moja droga? --- odparł Fred. --- Bogactwo jest dla niego bez pożytku, bo nie używa go na nic dobrego. Sam z niego nie korzysta i nie pomaga nikomu. Odmawia sobie nawet wszelkich wygód. Wiem dobrze o tym. Nigdy mi też na myśl nie przyszło prosić go kiedykolwiek o pomoc. Ha, ha, ha! Ale też on chyba nigdy nie pomyślał o tym, że my kiedyś, wcześniej czy później, odziedziczymy jego skarby...",
+      "text_sha256": "4e7265193b7ed42b7a19fddb15b4a80f89c3df54a3b792cedc43601b0ef747f7",
+      "context": [
+        {
+          "paragraph_index": 533,
+          "text": "--- Jest on po prostu starym dziwakiem --- zaopiniował siostrzeniec Scrooge'a. --- Nie mylę się: starym dziwakiem i do tego nieznośnym. Mógłby być chociaż cokolwiek grzeczniejszy. Ale wady człowieka są zawsze karą dla niego samego. Jest to prawda niezbita i pamiętając o niej, nie będę mu czynił wymówek."
+        },
+        {
+          "paragraph_index": 534,
+          "text": "--- Zdaje się, Fredziu, że on jest bardzo bogaty --- zauważyła żona. --- Przynajmniej ty zawsze mi tak mówisz."
+        }
+      ],
+      "context_chars": 414,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00594",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "12",
+      "paragraph_index": 594,
+      "target_text": "Znalazłszy się tuż przy Duchu, Scrooge zauważył jego niezwykle wysoki wzrost i uczuł, że go ogarnia niewypowiedziana trwoga. A ów przybysz tajemniczy wciąż milczał, stał w miejscu bez żadnego ruchu.",
+      "text_sha256": "e901f9558fbca378b5a8bfb306877832bd9d49150ab2a32afa0d32a7ff59498c",
+      "context": [
+        {
+          "paragraph_index": 592,
+          "text": "Gdy widmo zbliżało się do Scrooge'a, ten upadł przed nim na kolana, ponieważ zdawało mu się, że przybysz roztacza dokoła coś tajemniczego, posępnego i groźnego."
+        },
+        {
+          "paragraph_index": 593,
+          "text": "Ów długi, czarny płaszcz, podobny do całunu, spowijał szczelnie całą postać Ducha, nawet głowę i twarz, pozwalając widzieć tylko jedną wyciągniętą rękę. Gdyby nie to, trudno byłoby dojrzeć tę postać pośród ciemności nocnej."
+        }
+      ],
+      "context_chars": 383,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00602",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "12",
+      "paragraph_index": 602,
+      "target_text": "--- Duchu przyszłości --- zawołał wreszcie --- napełniasz mnie takim przerażeniem, jakiego nie doznawałem wobec twoich poprzedników. Ponieważ jednak wierzę, iż pragniesz mego dobra i ponieważ szczerze pragnę poprawić się, stać się innym zgoła człowiekiem, dziękuję ci już z góry z całego serca i gotów jestem wszędzie iść za tobą. Dlaczego jednak milczysz, dlaczego nie przemawiasz do mnie?",
+      "text_sha256": "62dd10913ec641d1cf36e631cdc7749557bc5be7c6e9d92b62de555b896069bc",
+      "context": [
+        {
+          "paragraph_index": 599,
+          "text": "Chociaż Scrooge już przywykł do obcowania z duchami, to jednak w obecności tego milczącego widma doznawał takiego strachu, że nogi się pod nim chwiały i nie mógł podążać za Duchem, który, snać to zauważywszy, zatrzymał się nieco, jakby chcąc mu dać dojść do równowagi."
+        },
+        {
+          "paragraph_index": 600,
+          "text": "Ale to zmieszało Scrooge'a jeszcze więcej."
+        },
+        {
+          "paragraph_index": 601,
+          "text": "Za każdym razem, gdy uczuwał, że oczy widma przenikliwie spoglądają na niego spoza czarnego całunu, przejmowała go straszliwa groza i dreszcze niewypowiedzianej trwogi, tym bardziej, że pomimo wszelkich swoich wysiłków, nie mógł nic rozróżnić pod tą czarną szatą; widział tylko wciąż wyciągniętą rękę widma i niewyraźne zarysy jego postaci."
+        }
+      ],
+      "context_chars": 650,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00619",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "13",
+      "paragraph_index": 619,
+      "target_text": "--- Jeżeli nam wyprawią porządną stypę, to ja nie mam nic przeciwko temu --- wtrącił jegomość w okularach. --- Za takie poświęcenie coś się przecież należy.",
+      "text_sha256": "7b4dff777f871bb321b7d185456dfb9dae3017e66b137e8f9b2cf5f915035847",
+      "context": [
+        {
+          "paragraph_index": 618,
+          "text": "--- Zdaje mi się --- ciągnął dalej jegomość z potwornym podbródkiem --- że będzie miał marny pogrzeb. Jestem pewien, że przystrojenia kościoła i karety żałobne niedrogo będą kosztowały, bo nie znam nikogo, kto by chciał pójść za jego trumną. A gdybyśmy tak bez zaproszenia odprowadzili go do grobu?"
+        }
+      ],
+      "context_chars": 298,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00625",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "13",
+      "paragraph_index": 625,
+      "target_text": "Dwóch jegomościów wskazanych przez Ducha znał również dobrze. Byli to bardzo bogaci i bardzo wpływowi giełdziarze. Scrooge usilnie starał się pozyskać ich zaufanie i szacunek, oczywiście w znaczeniu czysto giełdowym.",
+      "text_sha256": "b6e46186c4af21a25040ed8abbe1d78c68eb56ad0b5e1178ce54846f329361c6",
+      "context": [
+        {
+          "paragraph_index": 622,
+          "text": "Gromadka rozeszła się i zniknęła w tłumie, a Scrooge, który poznał wszystkich rozmawiających, zwrócił oczy na Ducha, jak gdyby oczekując od niego wyjaśnienia tego, co usłyszał."
+        },
+        {
+          "paragraph_index": 623,
+          "text": "Zamiast odpowiedzi, Duch pomknął na ulicę i palcem wskazał dwóch rozmawiających jegomościów."
+        },
+        {
+          "paragraph_index": 624,
+          "text": "Scrooge znów nadstawił uszu w nadziei, że teraz zagadka się rozwiąże."
+        }
+      ],
+      "context_chars": 337,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00662",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "14",
+      "paragraph_index": 662,
+      "target_text": "W jej tłumoku znajdowały się prześcieradła, serwety i trochę ubrania; dalej staroświeckie, srebrne łyżeczki do herbaty, szczypce do cukru i trochę obuwia.",
+      "text_sha256": "ea7ea22c17f5bf3b6722165f9f249a03efc654eacd36d5957806fe3d30b21457",
+      "context": [
+        {
+          "paragraph_index": 659,
+          "text": "Joe każdy przedmiot bardzo skrupulatnie badał, a nawet obwąchiwał, kreślił na ścianie kredą cenę każdego, a widząc, że nic więcej nie ma, zsumował nakreślone liczby."
+        },
+        {
+          "paragraph_index": 660,
+          "text": "--- Tyle wynosi twój rachunek, kochany przyjacielu --- rzekł do przedsiębiorcy pogrzebowego. --- Nie dam ani sześciu pensów więcej, choćby mnie smażono na wolnym ogniu. Cóż tam więcej?"
+        },
+        {
+          "paragraph_index": 661,
+          "text": "Przyszła kolej na panią Wilber."
+        }
+      ],
+      "context_chars": 380,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00681",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "14",
+      "paragraph_index": 681,
+      "target_text": "--- Duchu --- szepnął Scrooge, drżąc jak w febrze. --- Zrozumiałem, wszystko zrozumiałem. Los tego nieszczęśliwego może być moim losem. Do takiego końca prowadzi takie życie, jakie ja pędzę... Boże miłosierny, co ja widzę?!",
+      "text_sha256": "e6c3b8d18e6b1522c4cb4817cf8d81e7020ac7840bd6a9f2a0cb4d636fece775",
+      "context": [
+        {
+          "paragraph_index": 680,
+          "text": "--- Ha, ha, ha! --- rozprawiała w dalszym ciągu posługaczka, zaśmiewając się cynicznie, podczas gdy Joe, wydobywszy z ukrycia flanelowy worek z pieniędzmi, odliczał każdemu z tej trójki przypadającą należność. --- To była rzecz prawdziwie dobra, jedynie dobra, na jaką się zdobył przez całe życie. Nikt temu nie zaprzeczy. Za życia wszystkich odtrącał od siebie, żebyśmy mogli pożywić się trochę po jego śmierci. Ha, ha, ha!"
+        }
+      ],
+      "context_chars": 424,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00732",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "17",
+      "paragraph_index": 732,
+      "target_text": "Mały Bob wszedł do pokoju. Szyję miał owiniętą szalikiem wełnianym, a bardzo go ten biedak potrzebował. Herbata już się grzała dla niego i wszyscy starali się mu usłużyć. Dwoje najmłodszych dzieci wdrapało się na kolana ojca, przytuliło swoje twarzyczki do jego twarzy, jak gdyby chciały powiedzieć:",
+      "text_sha256": "da78b948082fc9b10dba8f03980fccb829dd9d1645c8df04f59b183c73d9fa68",
+      "context": [
+        {
+          "paragraph_index": 729,
+          "text": "--- I ja także."
+        },
+        {
+          "paragraph_index": 730,
+          "text": "--- Bo przecież Tim nie był ciężki --- rzekła matka, pochylając się nad robotą. --- Przy tym ojciec go tak kochał, tak bardzo kochał, że nie czuł nawet jego ciężaru. Ale zdaje mi się, że ojciec wraca..."
+        },
+        {
+          "paragraph_index": 731,
+          "text": "To rzekłszy, pani Cratchit szybko pobiegła na spotkanie męża."
+        }
+      ],
+      "context_chars": 278,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00740",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "17",
+      "paragraph_index": 740,
+      "target_text": "Teraz wszyscy usiedli dokoła kominka i zaczęli gwarzyć serdecznie. Matka i córki wciąż przy tym pracowały. Bob z ożywieniem opowiadał o szczególnej życzliwości, jaką mu okazał siostrzeniec Scrooge'a, którego spotkał na ulicy. Widział go tylko raz jeden, i to przelotnie, tymczasem dziś, gdy się spotkali, siostrzeniec Scrooge'a przywitał go serdecznie, a zauważywszy, że Bob ma niezwykły wyraz twarzy, zapytał go, czy mu się nie przytrafiło co złego...",
+      "text_sha256": "855178357b9a9313482c3a7f26cb76f4133dbd68a94e6e98be59af5c962ee4b7",
+      "context": [
+        {
+          "paragraph_index": 739,
+          "text": "Wstał i poszedł do pokoju na górze, oświetlonego i przyozdobionego zielenią jak na dzień wigilijny. Przy łóżeczku dziecka stało krzesełko i znać było, że niedawno jeszcze ktoś na mim siedział. Teraz Bob na nim usiadł i puścił wodze myślom bolesnym. Kiedy się uspokoił, ucałował łóżeczko, twarz jego przybrała wyraz spokojny człowieka pogodzonego z ciężkim ciosem. Westchnął raz jeszcze i wrócił na dół już w innym usposobieniu."
+        }
+      ],
+      "context_chars": 427,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00747",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "17",
+      "paragraph_index": 747,
+      "target_text": "--- Upewniłabyś się jeszcze więcej, gdybyś go widziała i mówiła z nim tak, jak ja --- podchwycił Bob. --- Wcale bym się nie dziwił (uważajcie, co powiem!), gdyby Piotr przy jego poparciu otrzymał lepsze miejsce.",
+      "text_sha256": "3e18cc212751ce4ee0370eea1fc58d773a202e98e9bc4d33696120ec905005d4",
+      "context": [
+        {
+          "paragraph_index": 745,
+          "text": "--- Dobrze powiedziane, mój chłopcze --- pochwalił go ojciec. --- Mam nadzieję, że tak jest istotnie, a nawet jestem o tym przekonany. ,,Szczerze wam obojgu współczuję, moi państwo\", powtórzył siostrzeniec Scrooge'a i dając mi swój bilet, nadmienił: ,,Oto mój bilet. Może będę mógł panu być w czymkolwiek użyteczny, proszę zwróć się pan do mnie z całą otwartością\". Byłem wprost oczarowany, nie jego propozycją, nie myślą o tym, że może nam istotnie dopomóc, lecz jego uprzejmością. Wielce mnie tym ujął. Mógłby kto pomyśleć, że znał naszego Małego Tima i że żałuje go na równi z nami."
+        },
+        {
+          "paragraph_index": 746,
+          "text": "--- Jestem pewna, że ma dobre serce --- rzekła pani Cratchit."
+        }
+      ],
+      "context_chars": 646,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00773",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "18",
+      "paragraph_index": 773,
+      "target_text": "--- Zanim zbliżę się do grobowca, który mi wskazujesz --- rzekł --- odpowiedz mi na jedno, jedyne pytanie. Chcę mianowicie wiedzieć, czy to, co widzę, jest obrazem tego, co musi się spełnić, czy też tego, co może nastąpić?",
+      "text_sha256": "6f0e3f785c61576145a3db622d4d13674c1c6db4b4df0afd05e738d270c2e084",
+      "context": [
+        {
+          "paragraph_index": 770,
+          "text": "Duch, stojąc wśród mogił, wskazywał na jedną z nich."
+        },
+        {
+          "paragraph_index": 771,
+          "text": "Scrooge, drżąc cały, zbliżył się do niej."
+        },
+        {
+          "paragraph_index": 772,
+          "text": "Duch pozornie wcale się nie zmienił, lecz Scrooge'owi zdawało się, iż w jego ponurej, majestatycznej postaci spostrzega coś nowego, co go do głębi poruszało..."
+        }
+      ],
+      "context_chars": 252,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00797",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "19",
+      "paragraph_index": 797,
+      "target_text": "Drżące jego ze wzruszenia ręce nie mogły sobie poradzić z ubraniem; wdziewał rzeczy na wywrót, szarpał je, upuszczał, słowem, wyprawiał z nimi istne awantury.",
+      "text_sha256": "703e44e52999f7601cd05e79fe1f488b09cd24b5bd6676ed80b1a199f28201fb",
+      "context": [
+        {
+          "paragraph_index": 795,
+          "text": "Był tak podniecony i tak ożywiony dobrymi zamiarami, że jego słaby, drżący głos nie odpowiadał sile przepełniających go uczuć. Łkał gwałtownie, a twarz jego zlewały obfite strumienie łez."
+        },
+        {
+          "paragraph_index": 796,
+          "text": "--- Są, są na swoim miejscu! --- zawołał, całując kotary łóżka. --- Nikt ich nie zerwał, nikt nie naruszył ich pierścieni. Są tutaj i ja jestem tutaj, a obrazy tego, co się zdarzyć mogło, mogą być rozwiane. Ja wiem, że one znikną, jestem o tym przekonany."
+        }
+      ],
+      "context_chars": 442,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00810",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "19",
+      "paragraph_index": 810,
+      "target_text": "--- Co to dziś mamy za dzień? --- zapytał przez okno małego chłopca w odświętnym ubraniu, który zatrzymał się przed oknem może dlatego, żeby się Scrooge'owi przypatrzeć.",
+      "text_sha256": "97275233de1db15a532091150bc8316e4aaeb52f9f4050798b12255d836740b4",
+      "context": [
+        {
+          "paragraph_index": 807,
+          "text": "Ani mgły, ani wilgoci."
+        },
+        {
+          "paragraph_index": 808,
+          "text": "Jasny, pogodny, mroźny dzień, jeden z tych, które rzeźwią i rozweselają duszę, pobudzając krew do energiczniejszego krążenia. Promieniejące słońce, jasne niebo, czyste powietrze, wesoły odgłos dzwonów!"
+        },
+        {
+          "paragraph_index": 809,
+          "text": "Wspaniale! Zachwycająco!"
+        }
+      ],
+      "context_chars": 247,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00834",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "19",
+      "paragraph_index": 834,
+      "target_text": "Mówiąc to, odliczył należność za indyka i za fiakra, a śmiał się przy tym nieustannie. Wróciwszy na górę i usiadłszy w fotelu cały spocony i zadyszany, wciąż się śmiał jeszcze.",
+      "text_sha256": "c0a04e8e34f464c2d45f5452cb4a0f4e5d2716e84808f24d59e10b317e786055",
+      "context": [
+        {
+          "paragraph_index": 831,
+          "text": "--- Poczciwa! Będę cię kochał, dopóki życia mi starczy... --- zawołał, głaszcząc pieszczotliwie kołatkę dłonią. --- Dziwna rzecz, żem nigdy przedtem nie zwrócił na nią uwagi. A jednak jak ona sympatycznie wygląda! Dobra, kochana kołatka. Lecz oto indyk, Hej, daj go tutaj! Jak się masz chłopcze! Życzę ci wesołych świąt."
+        },
+        {
+          "paragraph_index": 832,
+          "text": "Indyk był w samej rzeczy ogromny. Trudno było nawet przypuścić, żeby tak wielki i ciężki ptak mógł się utrzymać na własnych nogach. Chyba nie. Złamałyby się pod jego ciężarem jak dwie laski laku."
+        },
+        {
+          "paragraph_index": 833,
+          "text": "--- Ale ty, przyjacielu --- rzekł Scrooge --- nie dodźwigasz go do Camden Town. Musisz wziąć fiakra."
+        }
+      ],
+      "context_chars": 615,
+      "control_context": null
+    },
+    {
+      "schema_version": "items/1",
+      "item_id": "wl:dickens-opowiesc-wigilijna:p00873",
+      "book_id": "dickens-opowiesc-wigilijna",
+      "work_group_id": "dickens-opowiesc-wigilijna",
+      "author": "Charles Dickens",
+      "title": "Opowieść wigilijna",
+      "selection_stratum": "polish_translation",
+      "source_url": "https://wolnelektury.pl/media/book/xml/dickens-opowiesc-wigilijna.xml",
+      "rights": "Domena publiczna",
+      "split": "pilot",
+      "structural_region": "19",
+      "paragraph_index": 873,
+      "target_text": "--- A to co? --- burknął Scrooge, starając się swemu głosowi nadać ton jak najbardziej surowy. --- Jak można tak się opóźniać? Co pan sobie myśli?",
+      "text_sha256": "5b7d8d6ec1e2582ee6786d7efde2942a86d9330b831908f9dec822fa3067472f",
+      "context": [
+        {
+          "paragraph_index": 871,
+          "text": "Wstał wcześnie, wcześniej niż zwykle, gdyż pragnął koniecznie złapać Boba na spóźnieniu. Bardzo tego pragnął. I udało mu się to. Miał tę przyjemność. Zegar wybił dziewiątą --- Boba jeszcze nie było. Kwadrans po dziewiątej --- jeszcze go nie ma. Spóźnił się o całe osiemnaście i pół minuty. Scrooge otworzył szeroko drzwi do swego pokoju, aby widzieć, jak Cratchit będzie się przemykał do swej wyziębionej komórki."
+        },
+        {
+          "paragraph_index": 872,
+          "text": "Bob już w sieni zdjął kapelusz i szalik, a otworzywszy drzwi, w jednej chwili usiadł na swoim stołku i pióro jego zaczęło tak szybko biegać po papierze, jakby chciało dopędzić ubiegły czas."
+        }
+      ],
+      "context_chars": 602,
+      "control_context": null
+    }
+  ],
+  "endpoint": "https://script.google.com/macros/s/AKfycbzWvbD4nZ_Mz3VDvDmkpCab16jH10zjue59K2fjTYvR3OjsEEB-w-J8YeTWVSLKtoKWQg/exec",
+  "token": "CwZwDWDbxkLfaQ-lgK3W9zpqL0kiEXC2",
+  "demo": false,
+  "items_sha256": "b408921dced7b49d63a4defdb46095846814395fc2a58696b0f49efb38bd42a9"
+}

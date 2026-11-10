@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Proza VA — niezależne oceny</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#202633;background:#f1f3f6;line-height:1.55}*{box-sizing:border-box}body{margin:0}header{padding:1rem 1.5rem;background:#18334d;color:white}h1{font-size:1.35rem;margin:0 0 .5rem}button,input,select,textarea{font:inherit}button{cursor:pointer;padding:.5rem .9rem;border:1px solid #9ba8b8;border-radius:.3rem;background:white;color:#173b60}button:disabled{cursor:default;opacity:.55}button.primary{background:#174a76;color:white}input[type=file]{max-width:100%}main{display:grid;grid-template-columns:minmax(0,3fr) minmax(19rem,2fr);gap:1rem;padding:1rem;max-width:1600px;margin:auto}article,aside{background:white;padding:1.3rem;border-radius:.5rem;border:1px solid #d0d7df}aside{position:sticky;top:1rem;max-height:calc(100vh - 2rem);overflow:auto;align-self:start}h2{font-size:1.2rem}h3{font-size:1rem}.toolbar{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:.7rem 0}.context{color:#626a75;background:#f0f1f3;padding:.8rem 1rem;border-left:4px solid #b9bfc8}.target{background:#f2f8ff;border:2px solid #366998;padding:1rem;margin-top:1rem}.paragraph{white-space:pre-wrap;overflow-wrap:anywhere}.tag{font-weight:bold}.notice{padding:.6rem;background:#fff3cf;border-left:4px solid #af7700;color:#483600}.error{color:#9b1722;background:#ffeef0;padding:.7rem;white-space:pre-wrap}.status{min-height:1.8rem}fieldset{border:1px solid #c3cbd4;margin:1rem 0;padding:.8rem}legend{font-weight:650}.scale{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:.35rem}.scale label{position:relative;cursor:pointer}.scale input{position:absolute;width:1px;height:1px;opacity:0}.scale span{display:grid;place-items:center;min-height:2.8rem;border:2px solid #a1adbb;border-radius:.3rem;background:#f1f4f8;font-weight:700;font-size:1.15rem}.scale input:checked+span{background:#174a76;color:white;border-color:#174a76;box-shadow:inset 0 0 0 2px white}.scale input:focus-visible+span{outline:3px solid #dc9800;outline-offset:2px}.scale input:disabled+span{opacity:.55;cursor:default}summary{cursor:pointer;font-weight:650}.export-ready{background:#176443!important;color:white!important;border:3px solid #b57500!important}#progress{font-weight:700;font-size:1.2rem}#fragmentStart{scroll-margin-top:1rem}.anchors{display:flex;justify-content:space-between;font-size:.85rem;gap:.5rem;margin:.5rem 0}.anchors span{flex:1}.anchors span:nth-child(2){text-align:center}.anchors span:last-child{text-align:right}label.block{display:block;margin:.7rem 0}select,textarea{max-width:100%;padding:.4rem;border:1px solid #8c98a8;border-radius:.2rem}textarea{display:block;width:100%;min-height:5rem}.instruction{white-space:pre-wrap;font-size:.95rem;overflow-wrap:anywhere}.subtle{color:#596370;font-size:.88rem}[hidden]{display:none!important}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #dc9800;outline-offset:3px}@media(max-width:850px){main{display:block}aside{position:static;max-height:none;margin-top:1rem}}@media print{header,.toolbar,form{display:none}main{display:block}aside{position:static;max-height:none}}
+</style>
+</head>
+<body>
+<header>
+<h1>Proza VA — niezależne oceny nastroju narracji</h1>
+<label>Otwórz pakiet JSON <input id="packageFile" type="file" accept=".json,application/json"></label>
+<div class="toolbar"><button id="exportButton" disabled>Eksportuj oceny JSON</button><button id="recoveryButton" hidden>Eksportuj awaryjny zapis</button><span id="packageLabel">Nie otwarto pakietu.</span></div>
+</header>
+<main>
+<article>
+<div id="message" class="status" role="status" aria-live="polite">Otwórz pakiet otrzymany od organizatora. Narzędzie działa lokalnie, bez serwera.</div>
+<div id="storageMessage" class="notice" hidden></div>
+<div id="workspace" hidden>
+<div id="demoNote" class="notice" hidden>DEMO — próba techniczna. To nie są oceny badawcze.</div>
+<div id="progress" aria-live="polite"></div><div id="progressDetail" class="subtle"></div>
+<div class="toolbar"><button id="previousCorrection" disabled>Popraw poprzedni</button><button id="prevButton">← Poprzednie</button><button id="nextButton">Następne →</button><button id="unratedButton">Pierwsze nieocenione</button></div>
+<div id="fragmentStart" tabindex="-1"></div><h2 id="workTitle"></h2><div id="itemLabel" class="subtle"></div>
+<div id="isolatedNote" class="notice" hidden>Oceniasz sam akapit, bez kontekstu poprzedzającego.</div>
+<section id="contextSection" class="context" aria-labelledby="contextLabel"><h3 id="contextLabel">KONTEKST — nie oceniasz</h3><div id="contextText"></div></section>
+<section class="target" aria-labelledby="targetLabel"><h3 id="targetLabel">OCENIANY AKAPIT — oceniasz tylko ten tekst</h3><div id="targetText" class="paragraph"></div></section>
+<div id="lockedNote" class="notice" hidden>Pierwsza zatwierdzona ocena jest niezmienna. Ewentualna korekta zostanie zapisana osobno, z powodem.</div>
+<div id="revisionSummary" class="subtle"></div>
+<form id="ratingForm" novalidate>
+<fieldset id="editableFields">
+<legend>Ocena nastroju narracji wskazanego akapitu</legend>
+<label class="block"><input id="unable" type="checkbox"> Nie potrafię ocenić (obie skale pozostaną puste; opisz powód w komentarzu)</label>
+<fieldset id="valenceField"><legend>Nastrój (walencja): nieprzyjemny ↔ przyjemny</legend><div id="valenceScale" class="scale"></div><div class="anchors"><span>1 — bardzo ponury, przygnębiający lub groźny</span><span>5 — ani przyjemny, ani nieprzyjemny</span><span>9 — bardzo radosny, ciepły</span></div></fieldset>
+<fieldset id="arousalField"><legend>Energia (pobudzenie): spokój ↔ intensywność</legend><div id="arousalScale" class="scale"></div><div class="anchors"><span>1 — zupełny spokój, statyczny opis</span><span>5 — coś się dzieje, lekkie napięcie lub ożywienie</span><span>9 — gwałtowna akcja, szok, panika lub euforia</span></div></fieldset>
+<label class="block" id="midLabel" hidden>Gdy V = 5, wskaż znaczenie środka:
+<select id="valence_mid"><option value="">Wybierz…</option><option value="neutral">Neutralny</option><option value="mixed">Mieszany (negatywny i pozytywny)</option></select></label>
+<label class="block">Postać czuje co innego niż narracja <select id="character_divergence"><option value="">Wybierz…</option><option value="yes">Tak</option><option value="no">Nie</option><option value="na">Nie dotyczy / brak możliwości oceny</option></select></label>
+<label class="block">Pewność oceny <select id="confidence"><option value="">Wybierz…</option><option value="1">1 — mała</option><option value="2">2 — średnia</option><option value="3">3 — duża</option></select></label>
+<label class="block">Znasz to dzieło? <select id="familiar_with_work"><option value="">Wybierz raz na dzieło…</option><option value="yes">Tak</option><option value="no">Nie</option><option value="unsure">Nie wiem</option></select></label>
+<div id="familiarNote" class="subtle">Odpowiedź jest pytana przy pierwszym oknie i przenoszona na kolejne okna tego dzieła.</div>
+<label class="block">Komentarz (wymagany, jeśli nie potrafisz ocenić)<textarea id="comment" maxlength="20000"></textarea></label>
+<label id="revisionReasonLabel" class="block" hidden>Powód osobnej korekty (wymagany)<textarea id="revisionReason" maxlength="4000"></textarea></label>
+</fieldset>
+<div id="timeLabel" class="subtle"></div>
+<div class="toolbar"><button id="submitButton" class="primary" type="submit">Zatwierdź</button><button id="revisionButton" type="button" hidden>Dodaj osobną korektę</button><button id="cancelRevision" type="button" hidden>Anuluj korektę</button></div>
+</form>
+<div id="completion" class="notice" hidden><strong>Gotowe, kliknij Eksportuj</strong><div class="toolbar"><button id="exportFinishButton" class="export-ready" type="button">Eksportuj</button></div></div>
+</div>
+</article>
+<aside aria-labelledby="instructionTitle"><details id="instructionPanel" open><summary id="instructionTitle">Pokaż instrukcję</summary><h2>Instrukcja i przykłady</h2><div id="instructionVersion" class="subtle"></div><div id="instructionText" class="instruction">Instrukcja z pakietu pojawi się tutaj po jego otwarciu.</div><hr><p>Oceniasz nastrój narracji, a nie emocje postaci ani własną reakcję. <span id="contextHint">Kontekst służy rozumieniu.</span> Nie korzystaj z dalszej fabuły, modeli ani konsultacji.</p><p class="subtle">Skróty: 1–9 wybiera ocenę na aktywnej skali; Tab przechodzi między skalami i pozostałymi polami. Strzałki zmieniają wybór na skali. Poza polami: ← / → nawigacja; Shift+1–9 pobudzenie; Ctrl+Enter zatwierdzenie oraz Ctrl+Shift+E eksport działają także w polach. Skróty skali nie działają w zablokowanej ocenie.</p><p class="subtle">Regularnie eksportuj plik i przekaż go organizatorowi. Sam zapis przeglądarki nie jest kopią zapasową. Czas obejmuje aktywny, widoczny widok; długa przerwa i czas zamknięcia są pomijane.</p></details></aside>
+</main>
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const PACKAGE_KEYS = ['schema_version','package_id','rater_id','round','seed','instruction','items','demo','source_note'];
+const ITEM_KEYS = ['schema_version','item_id','book_id','work_group_id','author','title','split','selection_stratum','structural_region','paragraph_index','target_text','context','context_chars','control_context','text_sha256','source_url','rights'];
+const RATING_KEYS = ['schema_version','rating_id','item_id','rater_id','round','instruction_version','presentation','created_at','valence','arousal','valence_mid','character_divergence','confidence','familiar_with_work','comment','time_spent_ms','saw_model_outputs'];
+const FIELDS = ['valence','arousal','valence_mid','character_divergence','confidence','familiar_with_work','comment','unable','reason','elapsed_ms'];
+const enums = {round:['pilot1','pilot2','dev','test','retest'],familiar:['yes','no','unsure'],divergence:['yes','no','na']};
+let activeScale = 'valence', revisionReturnIndex = null;
+let pkg = null, state = null, index = 0, revisionMode = false, storageKey = '', recoveryRaw = null, lastTick = performance.now(), storageFailed = false;
+function fail(message){throw new Error(message);}
+function obj(value){return value !== null && typeof value === 'object' && !Array.isArray(value);}
+function keys(value, expected, label){if(!obj(value)||Object.keys(value).length!==expected.length||expected.some(k=>!Object.prototype.hasOwnProperty.call(value,k)))fail(label+': niezgodne lub nieznane pola. Pakiety zawierające predykcje i wyniki modeli są niedozwolone.');}
+function str(value,label,empty=false){if(typeof value!=='string'||(!empty&&!value.trim())||value.normalize('NFC')!==value)fail(label+': oczekiwany tekst UTF-8 NFC.');}
+function integer(value,min,max,label){if(!Number.isSafeInteger(value)||value<min||value>max)fail(label+': nieprawidłowa liczba całkowita.');}
+function choice(value,allowed,label){if(!allowed.includes(value))fail(label+': nieprawidłowa wartość.');}
+function presentation(p){return Object.prototype.hasOwnProperty.call(p,'presentation')?p.presentation:'window';}
+function validatePackage(p){
+ keys(p,obj(p)&&Object.prototype.hasOwnProperty.call(p,'presentation')?[...PACKAGE_KEYS,'presentation']:PACKAGE_KEYS,'Pakiet');choice(presentation(p),['window','isolated'],'Prezentacja'); if(p.schema_version!=='annotation-package/1')fail('Nieobsługiwana wersja pakietu.');
+ if(typeof p.package_id!=='string'||!(/^[a-f0-9]{64}$/).test(p.package_id))fail('Nieprawidłowy identyfikator pakietu.');
+ str(p.rater_id,'Osoba');if(!/^[A-Za-z0-9_-]{1,64}$/.test(p.rater_id))fail('Nieprawidłowy pseudonim osoby.'); choice(p.round,enums.round,'Runda');integer(p.seed,0,Number.MAX_SAFE_INTEGER,'Ziarno');
+ if(typeof p.demo!=='boolean')fail('demo musi być wartością logiczną.');str(p.source_note,'Pochodzenie',true);
+ keys(p.instruction,['version','text'],'Instrukcja');str(p.instruction.version,'Wersja instrukcji');str(p.instruction.text,'Instrukcja');
+ if(!Array.isArray(p.items)||!p.items.length)fail('Pakiet nie zawiera okien.');
+ const ids=new Set(), used=new Map(), closed=new Set(), metadata=new Map();let previousBook=null, previousIndex=-1;
+ for(const item of p.items){
+  keys(item,ITEM_KEYS,'Okno');if(item.schema_version!=='items/1')fail('Nieobsługiwana wersja okna.');
+  for(const key of ['item_id','book_id','work_group_id','author','title','target_text','source_url','rights'])str(item[key],key);
+  if(item.structural_region!==null)str(item.structural_region,'Granica strukturalna');
+  choice(item.split,['pilot','dev','test','synthetic'],'Podział');choice(item.selection_stratum,['original_polish','polish_translation'],'Warstwa');
+  if(item.split==='synthetic'&&!p.demo)fail('Materiał syntetyczny wymaga oznaczenia demo.');
+  if(!p.demo&&item.split!=='synthetic'&&p.round!=='retest'&&item.split!==({pilot1:'pilot',pilot2:'pilot',dev:'dev',test:'test'})[p.round])fail('Podział materiału nie odpowiada rundzie.');
+  const bookMetadata=JSON.stringify(['work_group_id','author','title','split','selection_stratum'].map(key=>item[key]));if(metadata.has(item.book_id)&&metadata.get(item.book_id)!==bookMetadata)fail('Niespójne metadane tego samego dzieła.');metadata.set(item.book_id,bookMetadata);
+  if(ids.has(item.item_id))fail('Powtórzony item_id.');ids.add(item.item_id);
+  integer(item.paragraph_index,0,Number.MAX_SAFE_INTEGER,'Indeks akapitu');integer(item.context_chars,presentation(p)==='isolated'?0:1,Number.MAX_SAFE_INTEGER,'Długość kontekstu');
+  if(item.control_context!==null)fail('Pakiet oceniającego nie może zawierać dodatkowego kontekstu kontrolnego.');
+  if(typeof item.text_sha256!=='string'||!(/^[a-f0-9]{64}$/).test(item.text_sha256))fail('Nieprawidłowy hash tekstu.');
+  if(!Array.isArray(item.context))fail('Kontekst musi być listą.');
+  if(presentation(p)==='isolated'){if(item.context.length!==0)fail('Pakiet isolated nie może zawierać kontekstu.');}
+  else if(item.context.length<1||item.context.length>3)fail('Kontekst musi zawierać 1–3 poprzedniki.');
+  let total=0;const paragraphIndices=[];
+  item.context.forEach((context,j)=>{keys(context,['paragraph_index','text'],'Kontekst');integer(context.paragraph_index,0,Number.MAX_SAFE_INTEGER,'Indeks kontekstu');str(context.text,'Tekst kontekstu');if(context.paragraph_index!==item.paragraph_index-item.context.length+j)fail('Kontekst musi zawierać bezpośrednie poprzedniki w kolejności oryginału; następniki są zabronione.');total += [...context.text].length;paragraphIndices.push(context.paragraph_index);});
+  if(total!==item.context_chars)fail('context_chars nie odpowiada treści.');
+  if(previousBook!==item.book_id){if(closed.has(item.book_id))fail('Dzieło powraca poza swoim blokiem.');if(previousBook!==null)closed.add(previousBook);previousBook=item.book_id;previousIndex=-1;}
+  if(item.paragraph_index<=previousIndex)fail('Okna dzieła muszą być chronologiczne.');previousIndex=item.paragraph_index;
+  if(!used.has(item.book_id))used.set(item.book_id,new Set());const seen=used.get(item.book_id);paragraphIndices.push(item.paragraph_index);
+  for(const n of paragraphIndices){if(seen.has(n))fail('Okna nakładają się: cel lub kontekst występuje ponownie.');seen.add(n);}
+ }
+ return p;
+}
+function validateRating(r,p){
+ keys(r,RATING_KEYS,'Ocena');if(r.schema_version!=='ratings/1')fail('Nieobsługiwana wersja oceny.');str(r.rating_id,'rating_id');choice(r.presentation,['window','isolated'],'Prezentacja oceny');
+ if(!p.items.some(x=>x.item_id===r.item_id)||r.rater_id!==p.rater_id||r.round!==p.round||r.instruction_version!==p.instruction.version||r.presentation!==presentation(p)||r.saw_model_outputs!==false)fail('Ocena nie odpowiada pakietowi lub zawiera ekspozycję na wyniki modeli.');
+ if(typeof r.created_at!=='string'||!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d(?:\.\d+)?(?:Z|[+-]\d\d:\d\d)$/.test(r.created_at)||!Number.isFinite(Date.parse(r.created_at)))fail('Nieprawidłowa data oceny.');
+ if(r.comment!==null)str(r.comment,'Komentarz',true);
+ if(r.valence===null||r.arousal===null){if(r.valence!==null||r.arousal!==null||r.valence_mid!==null||typeof r.comment!=='string'||!r.comment.trim())fail('Brak oceny wymaga obu skal null i komentarza.');}
+ else{integer(r.valence,1,9,'Walencja');integer(r.arousal,1,9,'Pobudzenie');if(r.valence===5)choice(r.valence_mid,['neutral','mixed'],'Znaczenie V=5');else if(r.valence_mid!==null)fail('Flaga środka dotyczy tylko V=5.');}
+ choice(r.character_divergence,enums.divergence,'Różnica emocji postaci');choice(r.familiar_with_work,enums.familiar,'Znajomość dzieła');integer(r.confidence,1,3,'Pewność');integer(r.time_spent_ms,0,Number.MAX_SAFE_INTEGER,'Czas');
+}
+function blankDraft(){return {valence:'',arousal:'',valence_mid:'',character_divergence:'',confidence:'',familiar_with_work:'',comment:'',unable:false,reason:'',elapsed_ms:0};}
+function validateDraft(d){keys(d,FIELDS,'Szkic');for(const k of ['valence','arousal'])if(d[k]!==''&&!/^[1-9]$/.test(d[k]))fail('Nieprawidłowa skala szkicu.');for(const [k,allowed] of [['valence_mid',['','neutral','mixed']],['character_divergence',['',...enums.divergence]],['confidence',['','1','2','3']],['familiar_with_work',['',...enums.familiar]]])choice(d[k],allowed,k);str(d.comment,'Komentarz szkicu',true);str(d.reason,'Powód szkicu',true);if(typeof d.unable!=='boolean')fail('Nieprawidłowy szkic.');integer(d.elapsed_ms,0,Number.MAX_SAFE_INTEGER,'Czas szkicu');}
+function freshState(p){return {schema_version:'annotation-local/1',package_id:p.package_id,rater_id:p.rater_id,ratings:[],revisions:[],drafts:Object.create(null),familiarity:Object.create(null),index:0};}
+function validateState(s,p){
+ keys(s,['schema_version','package_id','rater_id','ratings','revisions','drafts','familiarity','index'],'Zapis lokalny');
+ if(s.schema_version!=='annotation-local/1'||s.package_id!==p.package_id||s.rater_id!==p.rater_id)fail('Zapis lokalny nie odpowiada pakietowi.');
+ if(!Array.isArray(s.ratings)||!Array.isArray(s.revisions)||!obj(s.drafts)||!obj(s.familiarity))fail('Nieprawidłowy zapis lokalny.');integer(s.index,0,p.items.length-1,'Bieżące okno');
+ const ids=new Set(), items=new Set(), firsts=new Map();
+ for(const [position,r] of s.ratings.entries()){validateRating(r,p);if(r.item_id!==p.items[position]?.item_id)fail('Pierwsze oceny muszą tworzyć początkowy ciąg okien w kolejności pakietu.');if(ids.has(r.rating_id)||items.has(r.item_id))fail('Powtórzona pierwsza ocena.');ids.add(r.rating_id);items.add(r.item_id);firsts.set(r.rating_id,r);}
+ if(s.index>Math.min(s.ratings.length,p.items.length-1))fail('Zapis wskazuje niewyświetlone jeszcze okno.');
+ const revisionIds=new Set();for(const rev of s.revisions){keys(rev,['revision_id','original_rating_id','reason','rating'],'Korekta');str(rev.revision_id,'Id korekty');str(rev.reason,'Powód korekty');const original=firsts.get(rev.original_rating_id);validateRating(rev.rating,p);if(!original||rev.rating.item_id!==original.item_id||rev.rating.familiar_with_work!==original.familiar_with_work||Date.parse(rev.rating.created_at)<Date.parse(original.created_at)||ids.has(rev.rating.rating_id)||revisionIds.has(rev.revision_id))fail('Nieprawidłowe powiązanie korekty.');ids.add(rev.rating.rating_id);revisionIds.add(rev.revision_id);}
+ for(const [id,d] of Object.entries(s.drafts)){if(!p.items.some(x=>x.item_id===id))fail('Obcy szkic.');validateDraft(d);}
+ for(const [book,value] of Object.entries(s.familiarity)){if(!p.items.some(x=>x.book_id===book))fail('Obce dzieło.');choice(value,enums.familiar,'Znajomość dzieła');}
+ for(const r of [...s.ratings,...s.revisions.map(x=>x.rating)]){const book=p.items.find(x=>x.item_id===r.item_id).book_id;if(!Object.prototype.hasOwnProperty.call(s.familiarity,book)||s.familiarity[book]!==r.familiar_with_work)fail('Niespójna znajomość dzieła.');}
+ s.drafts=Object.assign(Object.create(null),s.drafts);s.familiarity=Object.assign(Object.create(null),s.familiarity);return s;
+}
+function say(message,error=false){$('message').textContent=message;$('message').className=error?'error':'status';}
+function storageWarning(message){$('storageMessage').textContent=message;$('storageMessage').hidden=false;}
+function download(data,name){const blob=new Blob([data],{type:'application/json;charset=utf-8'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download=name;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function snapshot(){return {schema_version:'annotation-export/1',package_id:pkg.package_id,rater_id:pkg.rater_id,demo:pkg.demo,ratings:state.ratings,revisions:state.revisions};}
+function exportRatings(){if(!pkg)return;try{capture();validateState(state,pkg);download(JSON.stringify(snapshot(),null,2),'oceny-'+pkg.package_id.slice(0,12)+'.json');say('Pobrano eksport ocen. Przekaż plik organizatorowi.');}catch(error){say('Eksport wstrzymany: '+error.message,true);}}
+function persist(){if(!pkg)return;try{localStorage.setItem(storageKey,JSON.stringify(state));if(storageFailed){$('storageMessage').hidden=true;storageFailed=false;}}catch(error){storageFailed=true;recoveryRaw=JSON.stringify(state);$('recoveryButton').hidden=false;storageWarning('Zapis przeglądarki jest niedostępny lub pełny. Oceny są teraz tylko w pamięci. Eksportuj je przed zamknięciem strony!');}}
+function item(){return pkg.items[index];}
+function knownFamiliar(book){return Object.prototype.hasOwnProperty.call(state.familiarity,book)?state.familiarity[book]:undefined;}
+function firstRating(){return state.ratings.find(r=>r.item_id===item().item_id);}
+function draft(){if(!Object.prototype.hasOwnProperty.call(state.drafts,item().item_id))state.drafts[item().item_id]=blankDraft();return state.drafts[item().item_id];}
+function selected(name){const control=document.querySelector('input[name="'+name+'"]:checked');return control?control.value:'';}
+function capture(){if(!pkg||firstRating()&&!revisionMode)return;const d=draft();d.valence=selected('valence');d.arousal=selected('arousal');for(const k of ['valence_mid','character_divergence','confidence','familiar_with_work','comment'])d[k]=$(k).value.normalize('NFC');d.unable=$('unable').checked;d.reason=$('revisionReason').value.normalize('NFC');}
+function setScale(name,value){const radios=[...document.querySelectorAll('input[name="'+name+'"]')];for(const radio of radios){radio.checked=radio.value===String(value??'');radio.tabIndex=radio.checked||(!value&&radio.value==='1')?0:-1;}}
+function updateControls(){const unable=$('unable').checked,locked=!!firstRating()&&!revisionMode;$('valenceField').disabled=unable||locked;$('arousalField').disabled=unable||locked;const mid=selected('valence')==='5'&&!unable;$('midLabel').hidden=!mid;$('valence_mid').disabled=!mid||locked;$('familiar_with_work').disabled=locked||Object.prototype.hasOwnProperty.call(state.familiarity,item().book_id);}
+function render(){
+ const current=item(),first=firstRating(),locked=!!first&&!revisionMode,d=locked?{...first,valence:first.valence??'',arousal:first.arousal??'',valence_mid:first.valence_mid??'',confidence:String(first.confidence),comment:first.comment??'',unable:first.valence===null,reason:'',elapsed_ms:first.time_spent_ms}:draft();
+ $('workspace').hidden=false;$('exportButton').disabled=false;$('demoNote').hidden=!pkg.demo;
+ $('packageLabel').textContent='Osoba: '+pkg.rater_id+' | runda: '+pkg.round;
+ $('progress').textContent=state.ratings.length+' / '+pkg.items.length;
+ $('progressDetail').textContent='Akapit '+(index+1)+' · osobne korekty: '+state.revisions.length;
+ $('instructionPanel').open=index===0&&state.ratings.length===0;
+ const complete=state.ratings.length===pkg.items.length&&!revisionMode;$('completion').hidden=!complete;$('exportButton').classList.toggle('export-ready',complete);
+ $('previousCorrection').disabled=revisionMode||previousCorrectionIndex()<0;
+ $('workTitle').textContent=current.title+' — '+current.author;$('itemLabel').textContent=current.item_id+' · akapit '+current.paragraph_index;
+ $('contextSection').hidden=presentation(pkg)==='isolated';$('isolatedNote').hidden=presentation(pkg)!=='isolated';$('contextHint').hidden=presentation(pkg)==='isolated';
+ $('contextText').replaceChildren();for(const context of current.context){const p=document.createElement('p');p.className='paragraph';p.textContent=context.text;$('contextText').appendChild(p);}
+ $('targetText').textContent=current.target_text;$('instructionVersion').textContent='Wersja: '+pkg.instruction.version;$('instructionText').textContent=pkg.instruction.text;
+ $('lockedNote').hidden=!locked;$('editableFields').disabled=locked;$('submitButton').hidden=locked;$('submitButton').textContent=revisionMode?'Zapisz osobną korektę':'Zatwierdź';$('revisionButton').hidden=!locked;$('revisionButton').textContent=Object.prototype.hasOwnProperty.call(state.drafts,current.item_id)?'Wznów osobną korektę':'Dodaj osobną korektę';$('cancelRevision').hidden=!revisionMode;$('revisionReasonLabel').hidden=!revisionMode;
+ setScale('valence',d.valence);setScale('arousal',d.arousal);$('unable').checked=d.unable;
+ for(const key of ['valence_mid','character_divergence','confidence','comment'])$(key).value=d[key];
+ $('familiar_with_work').value=knownFamiliar(current.book_id)??d.familiar_with_work;$('revisionReason').value=d.reason;
+ $('familiarNote').textContent=Object.prototype.hasOwnProperty.call(state.familiarity,current.book_id)?'Znajomość dzieła przeniesiona z pierwszej odpowiedzi; pozostaje stała.':'Wybierz przy pierwszym oknie. Odpowiedź będzie przenoszona na następne okna dzieła.';
+ $('revisionSummary').textContent=first?'Pierwsza ocena: '+first.created_at+' · korekty tego okna: '+state.revisions.filter(r=>r.original_rating_id===first.rating_id).length:'';
+ $('prevButton').disabled=index===0;$('nextButton').disabled=index===pkg.items.length-1||index>=state.ratings.length;$('unratedButton').disabled=state.ratings.length===pkg.items.length;updateControls();updateTime();lastTick=performance.now();
+}
+function updateTime(){if(pkg){const r=firstRating();const ms=r&&!revisionMode?r.time_spent_ms:draft().elapsed_ms;$('timeLabel').textContent=(revisionMode?'Czas osobnej korekty: ':'Czas aktywnego widoku: ')+Math.floor(ms/1000)+' s';}}
+function tick(){const now=performance.now(),delta=now-lastTick;lastTick=now;if(!pkg||document.hidden||!document.hasFocus()||(firstRating()&&!revisionMode))return;if(delta>0&&delta<10000){draft().elapsed_ms += Math.round(delta);updateTime();}}
+function navigate(to){if(!pkg)return;if(to>state.ratings.length){say('Najpierw zatwierdź bieżące nieocenione okno. Dalsze fragmenty pozostają ukryte.',true);return;}tick();capture();if(knownFamiliar(item().book_id)===undefined){const familiar=draft().familiar_with_work;if(!enums.familiar.includes(familiar)){say('Przed przejściem do innego okna odpowiedz, czy znasz to dzieło.',true);return;}state.familiarity[item().book_id]=familiar;}revisionMode=false;revisionReturnIndex=null;index=Math.max(0,Math.min(to,pkg.items.length-1));state.index=index;render();persist();scrollToFragment();say('');}
+function scrollToFragment(){$('fragmentStart').focus({preventScroll:true});$('fragmentStart').scrollIntoView({block:'start'});}
+function previousCorrectionIndex(){return state.ratings.length===pkg.items.length&&index===pkg.items.length-1?index:index-1;}
+function completionMessage(){return state.ratings.length===pkg.items.length?'Gotowe, kliknij Eksportuj':'Zapisano. Oceń następny akapit.';}
+function uid(prefix){if(globalThis.crypto&&typeof crypto.randomUUID==='function')return prefix+crypto.randomUUID();return prefix+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2)+'-'+Math.random().toString(36).slice(2);}
+$('packageFile').addEventListener('change',async event=>{
+ const file=event.target.files[0];if(!file)return;
+ try{
+  if(file.size>20*1024*1024)fail('Pakiet przekracza limit 20 MiB.');
+  const candidate=validatePackage(JSON.parse(await file.text())),key='proza-va:annotation/1:'+candidate.package_id+':'+candidate.rater_id,sameCurrent=!!pkg&&pkg.package_id===candidate.package_id&&pkg.rater_id===candidate.rater_id;
+  if(sameCurrent){tick();capture();persist();}
+  let restored=sameCurrent?validateState(JSON.parse(JSON.stringify(state)),candidate):freshState(candidate),raw=null,readFailed=sameCurrent&&storageFailed;
+  if(!sameCurrent){try{raw=localStorage.getItem(key);}catch(error){readFailed=true;}}
+  if(raw!==null){try{restored=validateState(JSON.parse(raw),candidate);}catch(error){recoveryRaw=raw;$('recoveryButton').hidden=false;fail('Nie można bezpiecznie odtworzyć zapisu lokalnego: '+error.message+' Pobierz awaryjny zapis i skontaktuj się z organizatorem. Dotychczasowy otwarty pakiet pozostaje aktywny.');}}
+  if(pkg&&!sameCurrent){tick();capture();persist();}
+  pkg=candidate;state=restored;storageKey=key;index=state.index;revisionMode=false;revisionReturnIndex=null;storageFailed=readFailed;$('storageMessage').hidden=!readFailed;if(readFailed)storageWarning('Nie można odczytać localStorage. Eksportuj regularnie; po zamknięciu strony postęp może zniknąć.');render();say('Pakiet otwarty. Każda pierwsza zatwierdzona ocena pozostaje niezmienna.');
+ }catch(error){say('Odmowa otwarcia: '+error.message,true);}finally{event.target.value='';}
+});
+$('ratingForm').addEventListener('submit',event=>{
+ event.preventDefault();if(!pkg||firstRating()&&!revisionMode)return;
+ try{
+  tick();capture();const wasRevision=revisionMode,d=draft(),first=firstRating(),known=knownFamiliar(item().book_id),familiar=known??d.familiar_with_work;
+  choice(familiar,enums.familiar,'Znajomość dzieła');if(revisionMode&&!d.reason.trim())fail('Podaj powód osobnej korekty.');
+  const r={schema_version:'ratings/1',rating_id:uid('rating-'),item_id:item().item_id,rater_id:pkg.rater_id,round:pkg.round,instruction_version:pkg.instruction.version,presentation:presentation(pkg),created_at:new Date().toISOString(),valence:d.unable?null:(d.valence?Number(d.valence):null),arousal:d.unable?null:(d.arousal?Number(d.arousal):null),valence_mid:!d.unable&&d.valence==='5'?d.valence_mid:null,character_divergence:d.character_divergence,confidence:d.confidence?Number(d.confidence):0,familiar_with_work:familiar,comment:d.comment.trim()?d.comment.trim():null,time_spent_ms:d.elapsed_ms,saw_model_outputs:false};
+  if(!d.unable&&(!d.valence||!d.arousal))fail('Wybierz obie skale lub zaznacz „Nie potrafię ocenić”.');validateRating(r,pkg);
+  if(revisionMode){if(Date.parse(r.created_at)<Date.parse(first.created_at))fail('Zegar komputera wskazuje czas sprzed pierwszej oceny. Popraw zegar przed zapisaniem korekty.');state.revisions.push({revision_id:uid('revision-'),original_rating_id:first.rating_id,reason:d.reason.trim(),rating:r});}else{state.ratings.push(r);state.familiarity[item().book_id]=familiar;}
+  delete state.drafts[item().item_id];revisionMode=false;
+  if(wasRevision&&revisionReturnIndex!==null){index=revisionReturnIndex;}else if(!wasRevision){const next=pkg.items.findIndex(it=>!state.ratings.some(r=>r.item_id===it.item_id));if(next!==-1)index=next;}
+  revisionReturnIndex=null;state.index=index;activeScale='valence';persist();render();scrollToFragment();say(completionMessage());
+ }catch(error){say(error.message,true);}
+});
+function beginRevision(){const first=firstRating();if(!first)return;revisionMode=true;const resume=Object.prototype.hasOwnProperty.call(state.drafts,item().item_id),d=draft();if(!resume)Object.assign(d,{valence:first.valence===null?'':String(first.valence),arousal:first.arousal===null?'':String(first.arousal),valence_mid:first.valence_mid??'',character_divergence:first.character_divergence,confidence:String(first.confidence),familiar_with_work:first.familiar_with_work,comment:first.comment??'',unable:first.valence===null,reason:'',elapsed_ms:0});render();persist();say('Edytujesz osobną korektę. Pierwsza ocena pozostaje bez zmian.');}
+$('revisionButton').addEventListener('click',()=>{revisionReturnIndex=Math.min(state.ratings.length,pkg.items.length-1);beginRevision();});
+$('previousCorrection').addEventListener('click',()=>{if(!pkg||revisionMode)return;const previous=previousCorrectionIndex();if(previous<0)return;tick();capture();revisionReturnIndex=index;index=previous;state.index=index;beginRevision();scrollToFragment();});
+$('cancelRevision').addEventListener('click',()=>{tick();capture();revisionMode=false;if(revisionReturnIndex!==null){index=revisionReturnIndex;state.index=index;revisionReturnIndex=null;}render();persist();scrollToFragment();say('Korekta nie została zatwierdzona; pierwsza ocena pozostaje bez zmian.');});
+$('prevButton').addEventListener('click',()=>navigate(index-1));$('nextButton').addEventListener('click',()=>navigate(index+1));$('unratedButton').addEventListener('click',()=>navigate(pkg.items.findIndex(it=>!state.ratings.some(r=>r.item_id===it.item_id))));
+$('exportButton').addEventListener('click',exportRatings);$('exportFinishButton').addEventListener('click',exportRatings);$('recoveryButton').addEventListener('click',()=>{if(storageFailed&&state){capture();recoveryRaw=JSON.stringify(state);}if(recoveryRaw!==null)download(recoveryRaw,'proza-va-awaryjny-zapis.json');});
+$('ratingForm').addEventListener('input',()=>{if(!pkg||firstRating()&&!revisionMode)return;updateControls();capture();persist();});
+$('ratingForm').addEventListener('change',()=>{if(!pkg||firstRating()&&!revisionMode)return;updateControls();capture();persist();});
+for(const name of ['valence','arousal'])for(let n=1;n<=9;n++){const label=document.createElement('label'),input=document.createElement('input');input.type='radio';input.name=name;input.value=String(n);input.id=name+'_'+n;input.setAttribute('aria-label',(name==='valence'?'Walencja ':'Pobudzenie ')+n);const face=document.createElement('span');face.textContent=String(n);input.tabIndex=n===1?0:-1;input.addEventListener('focus',()=>{activeScale=name;});input.addEventListener('change',()=>{activeScale=name;setScale(name,input.value);});label.append(input,face);$(name+'Scale').appendChild(label);}
+document.addEventListener('keydown',event=>{
+ if(!pkg)return;const tag=event.target.tagName,scaleRadio=event.target.matches('input[type=radio][name=valence],input[type=radio][name=arousal]'),typing=(!scaleRadio&&['INPUT','TEXTAREA','SELECT','BUTTON'].includes(tag))||event.target.isContentEditable;
+ if(event.ctrlKey&&event.shiftKey&&event.code==='KeyE'){event.preventDefault();exportRatings();return;}
+ if(event.ctrlKey&&event.key==='Enter'){event.preventDefault();$('ratingForm').requestSubmit();return;}
+ if(typing)return;
+ if(event.ctrlKey||event.altKey||event.metaKey)return;
+ if(scaleRadio&&['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key))return;
+ if(event.key==='ArrowLeft'){event.preventDefault();navigate(index-1);}else if(event.key==='ArrowRight'){event.preventDefault();navigate(index+1);}else if(/^(Digit|Numpad)[1-9]$/.test(event.code)&&(!firstRating()||revisionMode)&&!$('unable').checked){event.preventDefault();const name=event.shiftKey?'arousal':activeScale;setScale(name,event.code.slice(-1));document.querySelector('input[name="'+name+'"]:checked').focus();updateControls();capture();persist();}
+});
+document.addEventListener('visibilitychange',()=>{if(pkg){if(document.hidden){capture();persist();}lastTick=performance.now();}});
+window.addEventListener('blur',()=>{tick();capture();persist();lastTick=performance.now();});window.addEventListener('focus',()=>{lastTick=performance.now();});
+window.addEventListener('pagehide',()=>{tick();capture();persist();});
+setInterval(()=>{tick();if(pkg){capture();persist();}},1000);
+</script>
+<script>
+/* Wspólne renderowanie i walidacja ocen pochodzą z formularza lokalnego. */
+'use strict';
+// BEGIN ORDER ALGORITHM
+function mulberry32(seed) {
+  let a = seed >>> 0;
+  return function () {
+    a = (a + 0x6D2B79F5) >>> 0;
+    let t = Math.imul(a ^ (a >>> 15), a | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function shuffledOrder(itemIds, seed) {
+  const result = itemIds.slice(), random = mulberry32(seed);
+  for (let i = result.length - 1; i > 0; --i) {
+    const j = Math.floor(random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+// END ORDER ALGORITHM
+(function () {
+  let config = null, envelope = null, timer = null, sending = false, failures = 0;
+  let activeKey = '', lockKey = '', tabId = '', ownsLock = false, stopped = false;
+  let endpoint = '', token = '', lastError = '';
+  const originalRender = render;
+  const start = document.createElement('section');
+  start.id = 'onlineStart';
+  start.innerHTML = '<h2>Ocena nastroju narracji</h2><p>Badanie polega na ocenie nastroju krótkich fragmentów prozy i trwa około godziny. Zalecamy korzystanie z komputera; udział jest dobrowolny i można go przerwać w każdej chwili.</p><form id="onlineStartForm"><label class="block"><input id="onlineConsent" type="checkbox" required> Rozumiem, że udział jest dobrowolny, mogę przerwać w każdej chwili, a moje oceny zapisują się pod pseudonimem w arkuszu organizatora.</label><label class="block">Pseudonim <input id="onlinePseudonym" required minlength="2" maxlength="32" pattern="[A-Za-z0-9_-]{2,32}" autocomplete="off" aria-describedby="pseudonymHint"></label><p id="pseudonymHint" class="subtle">Nie wpisuj imienia i nazwiska. Użyj 2–32 liter bez polskich znaków, cyfr, znaku _ lub -.</p><label class="block">Płeć (dobrowolnie) <select id="onlineGender"><option value="nie podano">Wolę nie podawać</option><option value="K">K</option><option value="M">M</option><option value="inna">Inna</option></select></label><button id="onlineBegin" class="primary" type="submit" disabled>Rozpocznij</button></form>';
+  $('workspace').before(start);
+  const status = document.createElement('div');
+  status.id = 'onlineSync'; status.setAttribute('role', 'status'); status.setAttribute('aria-live', 'polite');
+  const restart = document.createElement('button');
+  restart.id = 'onlineRestart'; restart.type = 'button'; restart.textContent = 'Zacznij od nowa'; restart.hidden = true;
+  $('packageLabel').parentElement.append(status, restart);
+  $('packageFile').parentElement.hidden = true;
+  $('packageLabel').textContent = 'Ładowanie rundy…';
+  say('Ładowanie rundy…');
+  $('exportButton').textContent = 'Pobierz kopię odpowiedzi';
+  $('exportFinishButton').textContent = 'Pobierz kopię odpowiedzi';
+  $('instructionText').textContent = 'Instrukcja pojawi się po rozpoczęciu.';
+  $('completion').querySelector('strong').textContent = 'Dziękujemy za udział w badaniu!';
+  const finishStatus = document.createElement('p'); finishStatus.id = 'onlineFinishStatus';
+  $('completion').append(finishStatus);
+  $('progressDetail').after($('completion'));
+  document.querySelectorAll('aside .subtle').forEach(el => {
+    if (el.textContent.startsWith('Regularnie eksportuj')) el.textContent = 'Odpowiedzi są wysyłane na bieżąco. Możesz też pobrać kopię odpowiedzi. Czas obejmuje aktywny, widoczny widok; długa przerwa i czas zamknięcia są pomijane.';
+  });
+
+  function keyFor(entry) {
+    return entry.type + ':' + (entry.type === 'rating' ? entry.record.rating_id : entry.record.session_id);
+  }
+  function add(type, record) {
+    const entry = {type, record}, key = keyFor(entry);
+    if (!envelope.sent.includes(key) && !envelope.queue.some(x => keyFor(x) === key)) envelope.queue.push(entry);
+  }
+  function collect() {
+    if (!envelope.session || !state) return;
+    add('session', envelope.session);
+    for (const r of state.ratings) add('rating', {...r, session_id: envelope.session.session_id});
+    for (const r of state.revisions) add('rating', {...r.rating, session_id: envelope.session.session_id, original_rating_id: r.original_rating_id, reason: r.reason});
+    if (state.ratings.length === pkg.items.length) {
+      if (!envelope.completed_at) envelope.completed_at = new Date().toISOString();
+      add('completed', {session_id: envelope.session.session_id, completed_at: envelope.completed_at});
+    }
+    envelope.state = state;
+  }
+  function syncStatus() {
+    const pending = envelope ? envelope.queue.length : 0;
+    status.textContent = pending ? 'Oczekuje na wysłanie (' + pending + ')' : envelope && envelope.session ? 'Zapisano w arkuszu' : 'Oczekiwanie na rozpoczęcie';
+    if (lastError && pending) status.textContent += ' — ' + lastError;
+    finishStatus.textContent = pending ? 'Pozostaw kartę otwartą do zakończenia wysyłki lub pobierz kopię odpowiedzi. Nie zamykaj jej, dopóki widnieje oczekiwanie na wysłanie.' : 'Wszystkie odpowiedzi zapisano w arkuszu. Możesz pobrać kopię i zamknąć kartę.';
+  }
+  function canonicalJSON(value) {
+    if (Array.isArray(value)) return '[' + value.map(canonicalJSON).join(',') + ']';
+    if (value !== null && typeof value === 'object') return '{' + Object.keys(value).sort().map(key => JSON.stringify(key) + ':' + canonicalJSON(value[key])).join(',') + '}';
+    return JSON.stringify(value);
+  }
+  async function sha256(text) {
+    const hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+    return Array.from(new Uint8Array(hash), x => x.toString(16).padStart(2, '0')).join('');
+  }
+  function verifyOwnership() {
+    try {
+      const current = JSON.parse(localStorage.getItem(lockKey) || 'null');
+      if (!current || current.owner !== tabId) {
+        freeze('Sesja jest aktywna w innej karcie. Kontynuuj ocenianie w jednej karcie.');
+        return false;
+      }
+      return true;
+    } catch (error) {
+      storageFailed = true;
+      storageWarning('Nie można potwierdzić zapisu przeglądarki. Pobierz kopię odpowiedzi przed zamknięciem karty.');
+      return true;
+    }
+  }
+  function save() {
+    if (!envelope || stopped || !ownsLock) return false;
+    if (!verifyOwnership()) return false;
+    try {
+      localStorage.setItem(activeKey, JSON.stringify(envelope));
+      storageFailed = false; $('storageMessage').hidden = true;
+      return true;
+    } catch (error) {
+      storageFailed = true;
+      recoveryRaw = JSON.stringify(envelope);
+      $('recoveryButton').hidden = false;
+      storageWarning('Nie udało się zapisać w przeglądarce. Nie zamykaj karty; pobierz kopię odpowiedzi. Wysyłka będzie nadal ponawiana.');
+      return false;
+    }
+  }
+  persist = function () {
+    if (!envelope || stopped || !ownsLock) return;
+    if (!verifyOwnership()) return;
+    collect(); save(); syncStatus(); void flush();
+  };
+  render = function () {
+    if (stopped) return;
+    originalRender(); syncStatus();
+  };
+  completionMessage = function () {
+    return state.ratings.length === pkg.items.length ? 'Dziękujemy za udział! Sprawdź stan wysyłki odpowiedzi.' : 'Zatwierdzono. Oceń następny akapit.';
+  };
+  snapshot = function () {
+    collect();
+    return {schema_version: 'online-backup/1', session: envelope.session, state, pending: envelope.queue, completed_at: envelope.completed_at};
+  };
+  exportRatings = function () {
+    if (!envelope || !envelope.session) return;
+    tick(); capture(); persist();
+    download(JSON.stringify(snapshot(), null, 2), 'odpowiedzi-' + envelope.session.pseudonym + '-' + envelope.session.session_id + '.json');
+    say('Pobrano kopię odpowiedzi. Zachowaj ją do potwierdzenia odbioru przez organizatora.');
+  };
+  for (const id of ['exportButton', 'exportFinishButton']) $(id).addEventListener('click', event => {
+    event.preventDefault(); event.stopImmediatePropagation(); exportRatings();
+  }, true);
+
+  async function flush() {
+    if (!envelope || !ownsLock || stopped || sending || timer || !envelope.queue.length) return;
+    sending = true;
+    const entry = envelope.queue[0], controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    try {
+      const response = await fetch(endpoint, {method: 'POST', headers: {'Content-Type': 'text/plain;charset=utf-8'}, credentials: 'omit', redirect: 'follow', body: JSON.stringify({type: entry.type, token, record: entry.record}), signal: controller.signal});
+      if (!response.ok) throw new Error('Odpowiedź serwera ' + response.status);
+      const result = await response.json();
+      if (!result || result.ok !== true) throw new Error('Serwer nie potwierdził zapisu');
+      if (stopped || !ownsLock) return;
+      const key = keyFor(entry);
+      envelope.queue = envelope.queue.filter(x => keyFor(x) !== key);
+      if (!envelope.sent.includes(key)) envelope.sent.push(key);
+      failures = 0; lastError = ''; save();
+    } catch (error) {
+      failures += 1;
+      lastError = 'wysyłka będzie ponowiona; sprawdź połączenie';
+    } finally {
+      clearTimeout(timeout); sending = false; syncStatus();
+      if (envelope.queue.length && !stopped && ownsLock) {
+        const delay = failures ? Math.min(60000, 1000 * 2 ** Math.min(failures, 6)) : 0;
+        timer = setTimeout(() => {timer = null; void flush();}, delay);
+      }
+    }
+  }
+  function freeze(message) {
+    stopped = true; ownsLock = false;
+    $('workspace').hidden = true; start.hidden = true; restart.disabled = true;
+    say(message, true);
+  }
+  function lease() {
+    const now = Date.now(), existing = JSON.parse(localStorage.getItem(lockKey) || 'null');
+    if (existing && existing.owner !== tabId && existing.until > now) return false;
+    localStorage.setItem(lockKey, JSON.stringify({owner: tabId, until: now + 15000}));
+    return JSON.parse(localStorage.getItem(lockKey)).owner === tabId;
+  }
+  function activate() {
+    const session = envelope.session;
+    if (!Number.isInteger(session.seed) || session.seed < 0 || session.seed > 4294967295 || !/^[a-f0-9-]{36}$/i.test(session.session_id) || !['K', 'M', 'inna', 'nie podano'].includes(session.gender)) fail('Nieprawidłowy zapis sesji.');
+    const order = shuffledOrder(config.items.map(x => x.item_id), session.seed);
+    const map = new Map(config.items.map(x => [x.item_id, x]));
+    if (JSON.stringify(order) !== JSON.stringify(session.order) || session.items_sha256 !== config.items_sha256 || session.instruction_sha256 !== config.instruction_sha256 || session.instruction_version !== config.instruction.version || session.round !== config.round || session.presentation !== config.presentation || session.page_version !== config.page_version || !/^[A-Za-z0-9_-]{2,32}$/.test(session.pseudonym)) fail('Zapis sesji nie odpowiada aktualnej stronie. Pobierz zapis awaryjny i skontaktuj się z organizatorem.');
+    pkg = {schema_version: 'annotation-package/1', package_id: config.items_sha256, rater_id: session.pseudonym, round: config.round, presentation: config.presentation, seed: session.seed, instruction: config.instruction, items: order.map(id => map.get(id)), demo: config.demo === true, source_note: ''};
+    state = envelope.state ? validateState(envelope.state, pkg) : freshState(pkg);
+    index = state.index; revisionMode = false; revisionReturnIndex = null; storageKey = activeKey;
+    start.hidden = true; restart.hidden = false; render(); persist();
+    say('Sesja aktywna. Pierwsze zatwierdzone oceny pozostają niezmienne; poprawki są zapisywane osobno.');
+  }
+  $('ratingForm').addEventListener('submit', event => {
+    if (stopped || !ownsLock || !verifyOwnership()) {
+      event.preventDefault(); event.stopImmediatePropagation();
+    }
+  }, true);
+  document.addEventListener('keydown', event => {
+    if (stopped) { event.preventDefault(); event.stopImmediatePropagation(); }
+  }, true);
+  $('recoveryButton').addEventListener('click', event => {
+    event.preventDefault(); event.stopImmediatePropagation();
+    if (state === null && recoveryRaw !== null) {
+      download(recoveryRaw, 'odpowiedzi-zapis-awaryjny.json');
+    } else if (envelope && envelope.session) {
+      download(JSON.stringify(snapshot(), null, 2), 'odpowiedzi-kopia-awaryjna.json');
+    } else if (recoveryRaw !== null) download(recoveryRaw, 'odpowiedzi-zapis-awaryjny.json');
+  }, true);
+  $('onlineStartForm').addEventListener('submit', event => {
+    event.preventDefault();
+    if (!config || stopped || !ownsLock) return;
+    try {
+      const pseudonym = $('onlinePseudonym').value.trim();
+      if (!$('onlineConsent').checked) fail('Potwierdź dobrowolną zgodę na udział.');
+      if (!/^[A-Za-z0-9_-]{2,32}$/.test(pseudonym)) fail('Pseudonim musi mieć 2–32 znaki: litery bez polskich znaków, cyfry, _ lub -.');
+      const seed = crypto.getRandomValues(new Uint32Array(1))[0];
+      envelope.session = {session_id: crypto.randomUUID(), pseudonym, gender: $('onlineGender').value, round: config.round, presentation: config.presentation, instruction_version: config.instruction.version, instruction_sha256: config.instruction_sha256, items_sha256: config.items_sha256, seed, order: shuffledOrder(config.items.map(x => x.item_id), seed), started_at: new Date().toISOString(), page_version: config.page_version};
+      envelope.state = null; envelope.completed_at = null; activate();
+    } catch (error) { say(error.message, true); }
+  });
+  restart.addEventListener('click', () => {
+    if (!envelope || !envelope.session || stopped || !ownsLock) return;
+    if (!confirm('Rozpocząć nową sesję? Dotychczasowe odpowiedzi pozostaną zapisane. Nowa sesja otrzyma nową kolejność; przy ponownym użyciu pseudonimu organizator rozstrzygnie kolizję.')) return;
+    tick(); capture(); persist();
+    try {
+      localStorage.setItem(activeKey + ':archive:' + envelope.session.session_id, JSON.stringify(envelope));
+    } catch (error) { storageWarning('Nie udało się zachować poprzedniej sesji. Pobierz kopię przed rozpoczęciem nowej.'); return; }
+    envelope.session = null; envelope.state = null; envelope.completed_at = null;
+    pkg = null; state = null; revisionMode = false;
+    $('workspace').hidden = true; start.hidden = false; restart.hidden = true; $('exportButton').disabled = true;
+    $('onlineConsent').checked = false; $('onlineBegin').disabled = false;
+    save(); syncStatus(); say('Nowa sesja rozpocznie się po ponownym wyrażeniu zgody.');
+  });
+  window.addEventListener('beforeunload', event => {
+    if (envelope && (envelope.queue.length || storageFailed)) { event.preventDefault(); event.returnValue = ''; }
+  });
+  window.addEventListener('pagehide', () => {
+    if (!ownsLock || !lockKey) return;
+    try {
+      const current = JSON.parse(localStorage.getItem(lockKey) || 'null');
+      if (current && current.owner === tabId) localStorage.removeItem(lockKey);
+    } catch (error) { /* Lease expires if storage is unavailable. */ }
+  });
+  window.addEventListener('pageshow', event => { if (event.persisted) location.reload(); });
+  window.addEventListener('online', () => { if (timer) {clearTimeout(timer); timer = null;} void flush(); });
+  window.addEventListener('storage', event => {
+    if (event.key === lockKey && ownsLock) {
+      try { const other = JSON.parse(event.newValue || 'null'); if (other && other.owner !== tabId) freeze('Ta sesja została otwarta w innej karcie. Kontynuuj tam; nie oceniaj równolegle w dwóch kartach.'); }
+      catch (error) { freeze('Nie można potwierdzić wyłączności tej karty. Odśwież stronę.'); }
+    }
+  });
+  setInterval(() => {
+    if (!ownsLock || stopped) return;
+    try { if (!lease()) freeze('Sesja jest aktywna w innej karcie. Kontynuuj ocenianie w jednej karcie.'); }
+    catch (error) { freeze('Nie można bezpiecznie zapisywać sesji w tej przeglądarce. Pobierz kopię odpowiedzi.'); }
+  }, 5000);
+
+  async function init() {
+    try {
+      if (!globalThis.crypto || typeof crypto.randomUUID !== 'function') fail('Ta przeglądarka nie obsługuje bezpiecznych sesji. Otwórz link HTTPS w aktualnej przeglądarce.');
+      const response = await fetch('round.json', {cache: 'no-store'});
+      if (!response.ok) fail('Nie można pobrać puli rundy.');
+      config = await response.json();
+      if (config.schema_version !== 'online-round/1' || !Array.isArray(config.items) || !config.items.length || !config.instruction || !/^[a-f0-9]{64}$/.test(config.items_sha256) || !/^[a-f0-9]{64}$/.test(config.instruction_sha256)) fail('Nieprawidłowa konfiguracja strony.');
+      const hashes = await Promise.all([sha256(config.instruction.text), sha256(canonicalJSON(config.items))]);
+      if (hashes[0] !== config.instruction_sha256 || hashes[1] !== config.items_sha256) fail('Hash puli lub instrukcji nie odpowiada zawartości strony.');
+      const params = new URLSearchParams(location.search);
+      endpoint = params.get('endpoint') || params.get('e') || config.endpoint;
+      token = params.has('k') ? params.get('k') : config.token;
+      if (typeof endpoint !== 'string' || !/^https:\/\//.test(endpoint) || typeof token !== 'string' || !token) fail('Brak poprawnego adresu zapisu lub tokenu. Skontaktuj się z organizatorem.');
+      activeKey = 'proza-va:online/1:' + config.round + ':' + config.presentation + ':' + config.items_sha256 + ':' + config.instruction_sha256 + ':' + encodeURIComponent(endpoint);
+      lockKey = activeKey + ':lock'; tabId = crypto.randomUUID();
+      ownsLock = lease();
+      if (!ownsLock) fail('Ta runda jest już otwarta w innej karcie. Zamknij ją i odśwież tę stronę po kilkunastu sekundach.');
+      const raw = localStorage.getItem(activeKey);
+      recoveryRaw = raw;
+      envelope = raw ? JSON.parse(raw) : {schema_version: 'online-local/1', session: null, state: null, queue: [], sent: [], completed_at: null};
+      if (envelope.schema_version !== 'online-local/1' || !Array.isArray(envelope.queue) || !Array.isArray(envelope.sent)) fail('Nie można odtworzyć lokalnego zapisu. Skontaktuj się z organizatorem.');
+      $('packageLabel').textContent = 'Runda: ' + config.round;
+      if (envelope.session) activate();
+      else { $('onlineBegin').disabled = false; syncStatus(); say('Przeczytaj informację i rozpocznij, używając pseudonimu.'); void flush(); }
+    } catch (error) {
+      stopped = true; ownsLock = false; pkg = null; state = null;
+      $('onlineBegin').disabled = true;
+      if (recoveryRaw) $('recoveryButton').hidden = false;
+      say('Nie można rozpocząć: ' + error.message, true);
+    }
+  }
+  void init();
+})();
+
+</script>
+</body>
+</html>
